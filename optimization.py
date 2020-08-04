@@ -22,7 +22,7 @@ from __future__ import print_function
 import re
 import tensorflow.compat.v1 as tf
 
-from mobilebert import lamb_optimizer
+import lamb_optimizer
 
 
 def create_optimizer(loss, init_lr, num_train_steps, num_warmup_steps, use_tpu,

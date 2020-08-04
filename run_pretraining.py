@@ -25,9 +25,13 @@ import os
 
 import tensorflow.compat.v1 as tf
 
-from mobilebert import distill_util
-from mobilebert import modeling
-from mobilebert import optimization
+#from mobilebert import distill_util
+#from mobilebert import modeling
+#from mobilebert import optimization
+import distill_util
+import modeling
+import optimization 
+
 from tensorflow.contrib import layers as contrib_layers
 from tensorflow.contrib import summary as contrib_summary
 

@@ -1,6 +1,6 @@
-export TEACHER_CHECKPOINT=/path/to/checkpoint/
+export TEACHER_CHECKPOINT=../ckpt/mobilebert/
 export OUTPUT_DIR=/tmp/mobilebert/experiment/
-export TPU_NAME= arabert-mobilebert
+export TPU_NAME=arabert-mobilebert
 
 python3 run_pretraining.py \
   --attention_distill_factor=1 \
@@ -10,14 +10,14 @@ python3 run_pretraining.py \
   --distill_ground_truth_ratio=0.5 \
   --distill_temperature=1 \
   --do_train \
-  --first_input_file=gs://arabert-mobilebert \
+  --first_input_file=gs://arabert-mobilebert/tmp \
   --first_max_seq_length=128 \
   --first_num_train_steps=0 \
   --first_train_batch_size=4096 \
   --gamma_distill_factor=5 \
   --hidden_distill_factor=100 \
   --init_checkpoint=${TEACHER_CHECKPOINT} \
-  --input_file=path/to/pretraining_data \
+  --input_file=gs://arabert-mobilebert/tmp \
   --layer_wise_warmup \
   --learning_rate=0.0015 \
   --max_predictions_per_seq=20 \

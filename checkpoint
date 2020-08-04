@@ -1,0 +1,2 @@
+model_checkpoint_path: "/cns/tp-d/home/tensorflow-tpus/hongkuny/bert/pretrained_models/uncased_L-24_H-128_B-512_A-4_F-4_OPT/oss/mobilebert_variables.ckpt"
+all_model_checkpoint_paths: "/cns/tp-d/home/tensorflow-tpus/hongkuny/bert/pretrained_models/uncased_L-24_H-128_B-512_A-4_F-4_OPT/oss/mobilebert_variables.ckpt"
