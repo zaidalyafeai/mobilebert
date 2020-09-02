@@ -14,17 +14,13 @@ python3 run_squad.py \
 	--max_query_length=64 \
 	--max_seq_length=128 \
 	--n_best_size=20 \
-	--num_train_epochs=1 \
+	--num_train_epochs=5 \
 	--output_dir=${OUTPUT_DIR} \
-	--train_batch_size=128 \
-	--iterations_per_loop=1 \
-	--train_file=../MLQA_V1/test/test-context-ar-question-ar.json \
+	--train_batch_size=32 \
+	--train_file=../MLQA_V1/dev/dev-context-ar-question-ar.json \
 	--use_tpu \
 	--tpu_name=${TPU_NAME} \
 	--vocab_file=../bert/vocab.txt \
 	--warmup_proportion=0.1 \
 	--use_quantized_training=true \
-	--use_post_quantization=true \
-	--activation_quantiztion=true \
-	--export_dir=${EXPORT_DIR} \
 	--verbose_logging=True
