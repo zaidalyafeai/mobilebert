@@ -348,7 +348,8 @@ def convert_examples_to_features(examples, tokenizer, max_seq_length,
   unique_id = 1000000000
 
   features = []
-
+  tf.logging.info("Size of examples is "+ str(len(examples)))
+  
   for (example_index, example) in enumerate(examples):
     query_tokens = tokenizer.tokenize(example.question_text)
 
@@ -463,7 +464,7 @@ def convert_examples_to_features(examples, tokenizer, max_seq_length,
         start_position = 0
         end_position = 0
 
-      if example_index < 20:
+      if example_index < 1:
         tf.logging.info("*** Example ***")
         tf.logging.info("unique_id: %s" % (unique_id))
         tf.logging.info("example_index: %s" % (example_index))
@@ -715,6 +716,7 @@ def model_fn_builder(bert_config, init_checkpoint, learning_rate,
         log_probs = tf.nn.log_softmax(logits, axis=-1)
         loss = -tf.reduce_mean(
             tf.reduce_sum(one_hot_positions * log_probs, axis=-1))
+        
         return loss
 
       start_positions = features["start_positions"]
@@ -725,6 +727,7 @@ def model_fn_builder(bert_config, init_checkpoint, learning_rate,
 
       total_loss = (start_loss + end_loss) / 2.0
 
+      tf.logging.info("Current loss is " + str(total_loss))
       train_op = optimization.create_optimizer(total_loss, learning_rate,
                                                num_train_steps,
                                                num_warmup_steps, use_tpu)
@@ -1293,6 +1296,7 @@ def create_tokenizer_from_hub_module(bert_hub_module_handle):
 
 
 def main(_):
+  tf.logging.info("Start of main")
   tf.logging.set_verbosity(tf.logging.INFO)
 
   bert_config = modeling.BertConfig.from_json_file(FLAGS.bert_config_file)
@@ -1329,6 +1333,7 @@ def main(_):
   num_train_steps = None
   num_warmup_steps = None
   if FLAGS.do_train:
+    tf.logging.info("reading squad")
     train_examples = read_squad_examples(
         input_file=FLAGS.train_file, is_training=True)
     num_train_steps = int(
@@ -1338,10 +1343,12 @@ def main(_):
     # buffer in in the `input_fn`.
     rng = random.Random(12345)
     rng.shuffle(train_examples)
+    tf.logging.info("finished reading squad")
 
   if FLAGS.export_dir is not None:
     tf.gfile.MakeDirs(FLAGS.export_dir)
 
+  tf.logging.info("Building started")
   model_fn = model_fn_builder(
       bert_config=bert_config,
       init_checkpoint=FLAGS.init_checkpoint,
@@ -1351,7 +1358,7 @@ def main(_):
       use_tpu=FLAGS.use_tpu,
       use_one_hot_embeddings=False,
       hub_module_url=FLAGS.hub_module_url)
-
+  tf.logging.info("Building finished")
   # If TPU is not available, this will fall back to normal Estimator on CPU
   # or GPU.
   estimator = tf.estimator.tpu.TPUEstimator(
@@ -1361,14 +1368,17 @@ def main(_):
       train_batch_size=FLAGS.train_batch_size,
       predict_batch_size=FLAGS.predict_batch_size)
 
+  tf.logging.info("Maybe start training")
   if FLAGS.do_train:
     # We write to a temporary file to avoid storing very large constant tensors
     # in memory.
     train_file = os.path.join(FLAGS.data_dir or FLAGS.output_dir,
                               "train.tf_record")
     if not tf.gfile.Exists(train_file):
+      
       train_writer = FeatureWriter(filename=train_file, is_training=True)
 
+      tf.logging.info("started convert_examples_to_features")
       convert_examples_to_features(
           examples=train_examples,
           tokenizer=tokenizer,
@@ -1378,20 +1388,21 @@ def main(_):
           is_training=True,
           output_fn=train_writer.process_feature)
       train_writer.close()
-
+      tf.logging.info("done convert_examples_to_features")
       tf.logging.info("***** Running training *****")
       tf.logging.info("  Num orig examples = %d", len(train_examples))
       tf.logging.info("  Num split examples = %d", train_writer.num_features)
       tf.logging.info("  Batch size = %d", FLAGS.train_batch_size)
       tf.logging.info("  Num steps = %d", num_train_steps)
-
+      # raise ValueError('A very specific bad thing happened.')
     train_input_fn = input_fn_builder(
         input_file=train_file,
         seq_length=FLAGS.max_seq_length,
         is_training=True,
         drop_remainder=True)
+    
     estimator.train(input_fn=train_input_fn, max_steps=num_train_steps)
-
+    # raise ValueError('Finished Training')
   if FLAGS.do_predict:
     eval_examples = read_squad_examples(
         input_file=FLAGS.predict_file, is_training=False)
