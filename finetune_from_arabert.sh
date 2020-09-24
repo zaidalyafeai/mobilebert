@@ -9,7 +9,7 @@ python3 run_squad.py \
 	--doc_stride=128 \
 	--init_checkpoint=gs://arabert-mobilebert/mobilebert-ckpt/model.ckpt-1000.index \
 	--learning_rate=4e-05 \
-	--predict_file=../arcd-train.json \
+	--predict_file=arcd_squad.json \
 	--do_lower_case \
   	--do_predict \
 	--max_answer_length=30 \
@@ -19,7 +19,7 @@ python3 run_squad.py \
 	--num_train_epochs=1 \
 	--output_dir=${OUTPUT_DIR} \
 	--train_batch_size=16 \
-	--train_file=../arcd-train.json \
+	--train_file=arcd_squad.json \
 	--use_tpu \
 	--tpu_name=${TPU_NAME} \
 	--vocab_file=gs://arabert-mobilebert/arabert/vocab.txt \
