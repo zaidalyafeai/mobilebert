@@ -249,7 +249,7 @@ def model_fn_builder(bert_config,
     masked_lm_ids = features["masked_lm_ids"]
     masked_lm_weights = features["masked_lm_weights"]
     next_sentence_labels = features["next_sentence_labels"]
-
+    print("input ids ", input_ids.shape)
     is_training = (mode == tf.estimator.ModeKeys.TRAIN)
 
     if bert_teacher_config is None:
@@ -319,7 +319,7 @@ def model_fn_builder(bert_config,
          bert_config, model.get_sequence_output(), model.get_embedding_table(),
          masked_lm_positions, tf.stop_gradient(one_hot_labels),
          true_labels, masked_lm_weights)
-
+    print("Shape of r masked_lm_probs", masked_lm_log_probs.shape)
     (next_sentence_loss, next_sentence_example_loss,
      next_sentence_log_probs) = get_next_sentence_output(
          bert_config, model.get_pooled_output(), next_sentence_labels)

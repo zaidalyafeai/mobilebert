@@ -1,0 +1,308 @@
+WARNING:tensorflow:From run_inference.py:726: The name tf.estimator.tpu.InputPipelineConfig is deprecated. Please use tf.compat.v1.estimator.tpu.InputPipelineConfig instead.
+
+W1003 20:09:38.847949 140170379343616 module_wrapper.py:139] From run_inference.py:726: The name tf.estimator.tpu.InputPipelineConfig is deprecated. Please use tf.compat.v1.estimator.tpu.InputPipelineConfig instead.
+
+WARNING:tensorflow:From run_inference.py:727: The name tf.estimator.tpu.RunConfig is deprecated. Please use tf.compat.v1.estimator.tpu.RunConfig instead.
+
+W1003 20:09:38.848285 140170379343616 module_wrapper.py:139] From run_inference.py:727: The name tf.estimator.tpu.RunConfig is deprecated. Please use tf.compat.v1.estimator.tpu.RunConfig instead.
+
+WARNING:tensorflow:From run_inference.py:733: The name tf.estimator.tpu.TPUConfig is deprecated. Please use tf.compat.v1.estimator.tpu.TPUConfig instead.
+
+W1003 20:09:38.848490 140170379343616 module_wrapper.py:139] From run_inference.py:733: The name tf.estimator.tpu.TPUConfig is deprecated. Please use tf.compat.v1.estimator.tpu.TPUConfig instead.
+
+I1003 20:09:38.852594 140170379343616 discovery.py:271] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I1003 20:09:38.897131 140170379343616 discovery.py:867] URL being requested: GET https://tpu.googleapis.com/v1/projects/arabert/locations/europe-west4-a/nodes/arabert-mobilebert?alt=json
+I1003 20:09:38.897350 140170379343616 transport.py:157] Attempting refresh to obtain initial access_token
+I1003 20:09:38.961457 140170379343616 discovery.py:271] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I1003 20:09:39.004442 140170379343616 discovery.py:867] URL being requested: GET https://tpu.googleapis.com/v1/projects/arabert/locations/europe-west4-a/nodes/arabert-mobilebert?alt=json
+I1003 20:09:39.004679 140170379343616 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:From run_inference.py:747: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+W1003 20:09:39.073960 140170379343616 module_wrapper.py:139] From run_inference.py:747: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+WARNING:tensorflow:Estimator's model_fn (<function model_fn_builder.<locals>.model_fn at 0x7f7b9a108ae8>) includes params argument, but params are not passed to Estimator.
+W1003 20:09:39.074421 140170379343616 estimator.py:1994] Estimator's model_fn (<function model_fn_builder.<locals>.model_fn at 0x7f7b9a108ae8>) includes params argument, but params are not passed to Estimator.
+INFO:tensorflow:Using config: {'_experimental_max_worker_delay_secs': None, '_task_type': 'worker', '_protocol': None, '_tf_random_seed': None, '_save_checkpoints_secs': None, '_train_distribute': None, '_save_checkpoints_steps': 1000, '_global_id_in_cluster': 0, '_experimental_distribute': None, '_keep_checkpoint_every_n_hours': 10000, '_device_fn': None, '_task_id': 0, '_master': 'grpc://10.240.1.2:8470', '_log_step_count_steps': None, '_evaluation_master': 'grpc://10.240.1.2:8470', '_service': None, '_keep_checkpoint_max': 0, '_session_config': allow_soft_placement: true
+cluster_def {
+  job {
+    name: "worker"
+    tasks {
+      key: 0
+      value: "10.240.1.2:8470"
+    }
+  }
+}
+isolate_session_state: true
+, '_model_dir': 'gs://arabert-mobilebert/mobilebert-ckptv6', '_cluster': <tensorflow.python.distribute.cluster_resolver.tpu_cluster_resolver.TPUClusterResolver object at 0x7f7b98dccc88>, '_is_chief': True, '_num_worker_replicas': 1, '_session_creation_timeout_secs': 7200, '_tpu_config': TPUConfig(iterations_per_loop=1000, num_shards=None, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None, eval_training_input_configuration=2, experimental_host_call_every_n_steps=1), '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f7b9a111cc0>, '_eval_distribute': None, '_num_ps_replicas': 0, '_save_summary_steps': 100}
+I1003 20:09:39.075841 140170379343616 estimator.py:212] Using config: {'_experimental_max_worker_delay_secs': None, '_task_type': 'worker', '_protocol': None, '_tf_random_seed': None, '_save_checkpoints_secs': None, '_train_distribute': None, '_save_checkpoints_steps': 1000, '_global_id_in_cluster': 0, '_experimental_distribute': None, '_keep_checkpoint_every_n_hours': 10000, '_device_fn': None, '_task_id': 0, '_master': 'grpc://10.240.1.2:8470', '_log_step_count_steps': None, '_evaluation_master': 'grpc://10.240.1.2:8470', '_service': None, '_keep_checkpoint_max': 0, '_session_config': allow_soft_placement: true
+cluster_def {
+  job {
+    name: "worker"
+    tasks {
+      key: 0
+      value: "10.240.1.2:8470"
+    }
+  }
+}
+isolate_session_state: true
+, '_model_dir': 'gs://arabert-mobilebert/mobilebert-ckptv6', '_cluster': <tensorflow.python.distribute.cluster_resolver.tpu_cluster_resolver.TPUClusterResolver object at 0x7f7b98dccc88>, '_is_chief': True, '_num_worker_replicas': 1, '_session_creation_timeout_secs': 7200, '_tpu_config': TPUConfig(iterations_per_loop=1000, num_shards=None, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None, eval_training_input_configuration=2, experimental_host_call_every_n_steps=1), '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f7b9a111cc0>, '_eval_distribute': None, '_num_ps_replicas': 0, '_save_summary_steps': 100}
+INFO:tensorflow:_TPUContext: eval_on_tpu True
+I1003 20:09:39.076242 140170379343616 tpu_context.py:220] _TPUContext: eval_on_tpu True
+INFO:tensorflow:Writing example 0 of 8
+I1003 20:09:39.499010 140170379343616 run_inference.py:631] Writing example 0 of 8
+INFO:tensorflow:*** Example ***
+I1003 20:09:39.500050 140170379343616 run_inference.py:586] *** Example ***
+INFO:tensorflow:guid: train-0
+I1003 20:09:39.500275 140170379343616 run_inference.py:587] guid: train-0
+INFO:tensorflow:tokens: [CLS] في ##ال ##ك شوق ##ا بعد ما كد ##ت ار ##عو ##ي [SEP] و ##ا ##ه ##جر 0 ال ##ه ##وى و ##ال ##ت ##صاب ##ي ##ا [SEP]
+I1003 20:09:39.500430 140170379343616 run_inference.py:589] tokens: [CLS] في ##ال ##ك شوق ##ا بعد ما كد ##ت ار ##عو ##ي [SEP] و ##ا ##ه ##جر 0 ال ##ه ##وى و ##ال ##ت ##صاب ##ي ##ا [SEP]
+INFO:tensorflow:input_ids: 29756 781 7816 1000 5000 978 3161 834 806 981 433 8085 1007 29758 117 978 1004 7858 13 445 1004 8244 117 7816 981 28508 1007 978 29758 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.500604 140170379343616 run_inference.py:590] input_ids: 29756 781 7816 1000 5000 978 3161 834 806 981 433 8085 1007 29758 117 978 1004 7858 13 445 1004 8244 117 7816 981 28508 1007 978 29758 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.500769 140170379343616 run_inference.py:591] input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.500931 140170379343616 run_inference.py:592] segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:mask_positions: 18
+I1003 20:09:39.501047 140170379343616 run_inference.py:593] mask_positions: 18
+INFO:tensorflow:*** Example ***
+I1003 20:09:39.501650 140170379343616 run_inference.py:586] *** Example ***
+INFO:tensorflow:guid: train-1
+I1003 20:09:39.501856 140170379343616 run_inference.py:587] guid: train-1
+INFO:tensorflow:tokens: [CLS] و ##اص ##بح ##ت ارف ##و ال ##شيب و ##ه ##و مرقع [SEP] علي 0 من ##ه ما ليس خافي ##ا [SEP]
+I1003 20:09:39.501993 140170379343616 run_inference.py:589] tokens: [CLS] و ##اص ##بح ##ت ارف ##و ال ##شيب و ##ه ##و مرقع [SEP] علي 0 من ##ه ما ليس خافي ##ا [SEP]
+INFO:tensorflow:input_ids: 29756 117 7808 7822 981 2892 1005 445 28494 117 1004 1005 21470 29758 5468 13 857 1004 834 6186 16265 978 29758 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.502161 140170379343616 run_inference.py:590] input_ids: 29756 117 7808 7822 981 2892 1005 445 28494 117 1004 1005 21470 29758 5468 13 857 1004 834 6186 16265 978 29758 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.502333 140170379343616 run_inference.py:591] input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.502484 140170379343616 run_inference.py:592] segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:mask_positions: 15
+I1003 20:09:39.502587 140170379343616 run_inference.py:593] mask_positions: 15
+INFO:tensorflow:*** Example ***
+I1003 20:09:39.503182 140170379343616 run_inference.py:586] *** Example ***
+INFO:tensorflow:guid: train-2
+I1003 20:09:39.503343 140170379343616 run_inference.py:587] guid: train-2
+INFO:tensorflow:tokens: [CLS] و ##قد كاد يكسو ##ني 0 جناح ##ه [SEP] فقد حاد عن راسي و ##خلف ماضي ##ا [SEP]
+I1003 20:09:39.503468 140170379343616 run_inference.py:589] tokens: [CLS] و ##قد كاد يكسو ##ني 0 جناح ##ه [SEP] فقد حاد عن راسي و ##خلف ماضي ##ا [SEP]
+INFO:tensorflow:input_ids: 29756 117 8128 5942 25066 8215 13 15726 1004 29758 5721 3811 745 16932 117 27980 20931 978 29758 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.503624 140170379343616 run_inference.py:590] input_ids: 29756 117 8128 5942 25066 8215 13 15726 1004 29758 5721 3811 745 16932 117 27980 20931 978 29758 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.503787 140170379343616 run_inference.py:591] input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.503962 140170379343616 run_inference.py:592] segment_ids: 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:mask_positions: 6
+I1003 20:09:39.504066 140170379343616 run_inference.py:593] mask_positions: 6
+INFO:tensorflow:*** Example ***
+I1003 20:09:39.504655 140170379343616 run_inference.py:586] *** Example ***
+INFO:tensorflow:guid: train-3
+I1003 20:09:39.504801 140170379343616 run_inference.py:587] guid: train-3
+INFO:tensorflow:tokens: [CLS] مضى فم ##ضى طيب ال ##حي ##ا ##ة واس ##خط ##ت [SEP] خلايق 0 كنت عن ##هن راضي ##ا [SEP]
+I1003 20:09:39.504931 140170379343616 run_inference.py:589] tokens: [CLS] مضى فم ##ضى طيب ال ##حي ##ا ##ة واس ##خط ##ت [SEP] خلايق 0 كنت عن ##هن راضي ##ا [SEP]
+INFO:tensorflow:input_ids: 29756 6378 779 8043 5295 445 7889 978 980 6972 7901 981 29758 35161 13 6037 745 8218 16937 978 29758 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.505087 140170379343616 run_inference.py:590] input_ids: 29756 6378 779 8043 5295 445 7889 978 980 6972 7901 981 29758 35161 13 6037 745 8218 16937 978 29758 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.505241 140170379343616 run_inference.py:591] input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.505406 140170379343616 run_inference.py:592] segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:mask_positions: 14
+I1003 20:09:39.505519 140170379343616 run_inference.py:593] mask_positions: 14
+INFO:tensorflow:*** Example ***
+I1003 20:09:39.506191 140170379343616 run_inference.py:586] *** Example ***
+INFO:tensorflow:guid: train-4
+I1003 20:09:39.506364 140170379343616 run_inference.py:587] guid: train-4
+INFO:tensorflow:tokens: [CLS] و ##لم ا ##ت ما قد حرم الله في ال ##ه ##وى [SEP] و ##لم اترك مما 0 الله باقي ##ا [SEP]
+I1003 20:09:39.506491 140170379343616 run_inference.py:589] tokens: [CLS] و ##لم ا ##ت ما قد حرم الله في ال ##ه ##وى [SEP] و ##لم اترك مما 0 الله باقي ##ا [SEP]
+INFO:tensorflow:input_ids: 29756 117 8173 90 981 834 787 3875 12695 781 445 1004 8244 29758 117 8173 12025 6447 13 12695 13099 978 29758 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.506650 140170379343616 run_inference.py:590] input_ids: 29756 117 8173 90 981 834 787 3875 12695 781 445 1004 8244 29758 117 8173 12025 6447 13 12695 13099 978 29758 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.506814 140170379343616 run_inference.py:591] input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1003 20:09:39.506960 140170379343616 run_inference.py:592] segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:mask_positions: 18
+I1003 20:09:39.507059 140170379343616 run_inference.py:593] mask_positions: 18
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+W1003 20:09:39.691646 140170379343616 deprecation.py:506] From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+INFO:tensorflow:Querying Tensorflow master (grpc://10.240.1.2:8470) for TPU system metadata.
+I1003 20:09:39.693002 140170379343616 tpu_system_metadata.py:78] Querying Tensorflow master (grpc://10.240.1.2:8470) for TPU system metadata.
+2020-10-03 20:09:39.694034: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+INFO:tensorflow:Found TPU system:
+I1003 20:09:39.704467 140170379343616 tpu_system_metadata.py:148] Found TPU system:
+INFO:tensorflow:*** Num TPU Cores: 8
+I1003 20:09:39.704673 140170379343616 tpu_system_metadata.py:149] *** Num TPU Cores: 8
+INFO:tensorflow:*** Num TPU Workers: 1
+I1003 20:09:39.704803 140170379343616 tpu_system_metadata.py:150] *** Num TPU Workers: 1
+INFO:tensorflow:*** Num TPU Cores Per Worker: 8
+I1003 20:09:39.704915 140170379343616 tpu_system_metadata.py:152] *** Num TPU Cores Per Worker: 8
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, -1, 7835961182407315437)
+I1003 20:09:39.705014 140170379343616 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, -1, 7835961182407315437)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 17179869184, 14222358662540358125)
+I1003 20:09:39.705767 140170379343616 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 17179869184, 14222358662540358125)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 17179869184, 14330526332088874708)
+I1003 20:09:39.705919 140170379343616 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 17179869184, 14330526332088874708)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 17179869184, 3689861482605695582)
+I1003 20:09:39.706024 140170379343616 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 17179869184, 3689861482605695582)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 17179869184, 6767368406326855144)
+I1003 20:09:39.706123 140170379343616 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 17179869184, 6767368406326855144)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 17179869184, 7352399010600388340)
+I1003 20:09:39.706221 140170379343616 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 17179869184, 7352399010600388340)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 17179869184, 13833092142786259930)
+I1003 20:09:39.706323 140170379343616 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 17179869184, 13833092142786259930)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 17179869184, 9905973660726973529)
+I1003 20:09:39.706422 140170379343616 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 17179869184, 9905973660726973529)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 17179869184, 8516081864238469710)
+I1003 20:09:39.706519 140170379343616 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 17179869184, 8516081864238469710)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 7236407205036637755)
+I1003 20:09:39.706616 140170379343616 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 7236407205036637755)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 17179869184, 6953016204865392136)
+I1003 20:09:39.706726 140170379343616 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 17179869184, 6953016204865392136)
+INFO:tensorflow:Calling model_fn.
+I1003 20:09:39.708409 140170379343616 estimator.py:1148] Calling model_fn.
+INFO:tensorflow:Found small feature: masked_positions [1, 1]
+I1003 20:09:41.010612 140170379343616 tpu_estimator.py:1201] Found small feature: masked_positions [1, 1]
+INFO:tensorflow:Found small feature: masked_positions [1, 1]
+I1003 20:09:41.013365 140170379343616 tpu_estimator.py:1201] Found small feature: masked_positions [1, 1]
+INFO:tensorflow:Found small feature: masked_positions [1, 1]
+I1003 20:09:41.015198 140170379343616 tpu_estimator.py:1201] Found small feature: masked_positions [1, 1]
+INFO:tensorflow:Found small feature: masked_positions [1, 1]
+I1003 20:09:41.017033 140170379343616 tpu_estimator.py:1201] Found small feature: masked_positions [1, 1]
+INFO:tensorflow:Found small feature: masked_positions [1, 1]
+I1003 20:09:41.018935 140170379343616 tpu_estimator.py:1201] Found small feature: masked_positions [1, 1]
+INFO:tensorflow:Found small feature: masked_positions [1, 1]
+I1003 20:09:41.020885 140170379343616 tpu_estimator.py:1201] Found small feature: masked_positions [1, 1]
+INFO:tensorflow:Found small feature: masked_positions [1, 1]
+I1003 20:09:41.022925 140170379343616 tpu_estimator.py:1201] Found small feature: masked_positions [1, 1]
+INFO:tensorflow:Found small feature: masked_positions [1, 1]
+I1003 20:09:41.024841 140170379343616 tpu_estimator.py:1201] Found small feature: masked_positions [1, 1]
+2020-10-03 20:09:41.047595: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2020-10-03 20:09:41.047638: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2020-10-03 20:09:41.047668: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (arabert-mobilebert): /proc/driver/nvidia/version does not exist
+INFO:tensorflow:*** Features ***
+I1003 20:09:41.060154 140170379343616 run_inference.py:254] *** Features ***
+INFO:tensorflow:  name = input_ids, shape = (1, 128)
+I1003 20:09:41.060402 140170379343616 run_inference.py:256]   name = input_ids, shape = (1, 128)
+INFO:tensorflow:  name = input_mask, shape = (1, 128)
+I1003 20:09:41.060537 140170379343616 run_inference.py:256]   name = input_mask, shape = (1, 128)
+INFO:tensorflow:  name = masked_positions, shape = (1, 1)
+I1003 20:09:41.060662 140170379343616 run_inference.py:256]   name = masked_positions, shape = (1, 1)
+INFO:tensorflow:  name = segment_ids, shape = (1, 128)
+I1003 20:09:41.060773 140170379343616 run_inference.py:256]   name = segment_ids, shape = (1, 128)
+WARNING:tensorflow:From run_inference.py:322: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.Dense instead.
+W1003 20:09:47.184574 140170379343616 deprecation.py:323] From run_inference.py:322: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.Dense instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/layers/core.py:187: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+W1003 20:09:47.186606 140170379343616 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/layers/core.py:187: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+INFO:tensorflow:**** Trainable Variables ****
+I1003 20:09:47.604015 140170379343616 run_inference.py:289] **** Trainable Variables ****
+INFO:tensorflow:  name = cls/predictions/transform/dense/kernel:0, shape = (512, 512), *INIT_FROM_CKPT*
+I1003 20:09:47.605292 140170379343616 run_inference.py:296]   name = cls/predictions/transform/dense/kernel:0, shape = (512, 512), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = cls/predictions/transform/dense/bias:0, shape = (512,), *INIT_FROM_CKPT*
+I1003 20:09:47.605536 140170379343616 run_inference.py:296]   name = cls/predictions/transform/dense/bias:0, shape = (512,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = cls/predictions/transform/LayerNorm/beta:0, shape = (512,), *INIT_FROM_CKPT*
+I1003 20:09:47.605635 140170379343616 run_inference.py:296]   name = cls/predictions/transform/LayerNorm/beta:0, shape = (512,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = cls/predictions/transform/LayerNorm/gamma:0, shape = (512,), *INIT_FROM_CKPT*
+I1003 20:09:47.605721 140170379343616 run_inference.py:296]   name = cls/predictions/transform/LayerNorm/gamma:0, shape = (512,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = cls/predictions/output_bias:0, shape = (30000,), *INIT_FROM_CKPT*
+I1003 20:09:47.605863 140170379343616 run_inference.py:296]   name = cls/predictions/output_bias:0, shape = (30000,), *INIT_FROM_CKPT*
+INFO:tensorflow:  name = cls/predictions/extra_output_weights:0, shape = (30000, 384), *INIT_FROM_CKPT*
+I1003 20:09:47.605960 140170379343616 run_inference.py:296]   name = cls/predictions/extra_output_weights:0, shape = (30000, 384), *INIT_FROM_CKPT*
+WARNING:tensorflow:From run_inference.py:300: The name tf.estimator.tpu.TPUEstimatorSpec is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimatorSpec instead.
+
+W1003 20:09:47.607609 140170379343616 module_wrapper.py:139] From run_inference.py:300: The name tf.estimator.tpu.TPUEstimatorSpec is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimatorSpec instead.
+
+INFO:tensorflow:Done calling model_fn.
+I1003 20:09:51.553525 140170379343616 estimator.py:1150] Done calling model_fn.
+INFO:tensorflow:TPU job name worker
+I1003 20:09:51.559659 140170379343616 tpu_estimator.py:506] TPU job name worker
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/array_ops.py:1475: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W1003 20:09:51.921602 140170379343616 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/array_ops.py:1475: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+INFO:tensorflow:Graph was finalized.
+I1003 20:09:53.188134 140170379343616 monitored_session.py:240] Graph was finalized.
+INFO:tensorflow:Restoring parameters from gs://arabert-mobilebert/mobilebert-ckptv6/model.ckpt-500
+I1003 20:09:53.225282 140170379343616 saver.py:1284] Restoring parameters from gs://arabert-mobilebert/mobilebert-ckptv6/model.ckpt-500
+INFO:tensorflow:Running local_init_op.
+I1003 20:09:56.644016 140170379343616 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I1003 20:09:57.165512 140170379343616 session_manager.py:502] Done running local_init_op.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:818: Variable.load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Prefer Variable.assign which has equivalent behavior in 2.X.
+W1003 20:09:57.950284 140170379343616 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:818: Variable.load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Prefer Variable.assign which has equivalent behavior in 2.X.
+INFO:tensorflow:Init TPU system
+I1003 20:09:58.485126 140170379343616 tpu_estimator.py:567] Init TPU system
+INFO:tensorflow:Initialized TPU in 6 seconds
+I1003 20:10:04.688147 140170379343616 tpu_estimator.py:576] Initialized TPU in 6 seconds
+INFO:tensorflow:Starting infeed thread controller.
+I1003 20:10:04.689050 140168759158528 tpu_estimator.py:521] Starting infeed thread controller.
+INFO:tensorflow:Starting outfeed thread controller.
+I1003 20:10:04.689538 140168739243776 tpu_estimator.py:540] Starting outfeed thread controller.
+INFO:tensorflow:Initialized dataset iterators in 0 seconds
+I1003 20:10:05.260847 140170379343616 util.py:98] Initialized dataset iterators in 0 seconds
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1003 20:10:05.766890 140170379343616 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1003 20:10:05.767701 140170379343616 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Outfeed finished for iteration (0, 0)
+I1003 20:10:05.769375 140168739243776 tpu_estimator.py:279] Outfeed finished for iteration (0, 0)
+INFO:tensorflow:prediction_loop marked as finished
+I1003 20:10:14.875884 140170379343616 error_handling.py:101] prediction_loop marked as finished
+8
+logits shape (1,)
+input ids (1, 128)
+(1,)
+text_a: فيالك شوقا بعد ما كدت أرعوي 
+text_b:  وأهجر 0 الهوى والتصابيا
+label:None
+prediction:['##ة']
+
+text_a: وأصبحت أرفو الشيب وهو مرقع 
+text_b:  علي 0 منه ما ليس خافيا
+label:None
+prediction:['##ة']
+
+text_a: وقد كاد يكسوني 0 جناحه 
+text_b:  فقد حاد عن رأسي وخلف ماضيا
+label:None
+prediction:['ال']
+
+text_a: مضى فمضى طيب الحياة وأسخطت 
+text_b:  خلائق 0 كنت عنهن راضيا
+label:None
+prediction:['ال']
+
+text_a: ولم آت ما قد حرم الله في الهوى 
+text_b:  ولم أترك مما 0 الله باقيا
+label:None
+prediction:['##ة']
+
+text_a: إذا ما تمشت 0 عين خريدة 
+text_b:  فليست تخطاني إلى من ورائيا
+label:None
+prediction:['ال']
+
+text_a: فيا عاذلي دعني وشأني ولا تكن 
+text_b:  شج في الذي 0 ودعني لما بيا
+label:None
+prediction:['ال']
+
+text_a: فيا عاذلي دعني وشأني ولا تكن 
+text_b:  شج في 0 أهوى ودعني لما بيا
+label:None
+prediction:['ال']
+

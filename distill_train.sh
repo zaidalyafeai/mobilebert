@@ -1,6 +1,6 @@
-export OUTPUT_DIR=gs://arabert-mobilebert/mobilebert-ckpt
+export OUTPUT_DIR=gs://arabert-mobilebert/mobilebert-ckptv7
 export TPU_NAME=arabert-mobilebert
-export DATA=gs://arabert-mobilebert/tmp/tf_examples.tfrecord
+export DATA=gs://arabert-mobilebert/poems/tf_examples.tfrecord
 python3 run_pretraining.py \
   --attention_distill_factor=1 \
   --bert_config_file=config/mobilebert.json \
@@ -9,10 +9,12 @@ python3 run_pretraining.py \
   --distill_ground_truth_ratio=0.5 \
   --distill_temperature=1 \
   --do_train \
+  --do_eval \
+  --eval_batch_size=8\
   --first_input_file=${DATA} \
   --first_max_seq_length=128 \
   --first_num_train_steps=0 \
-  --first_train_batch_size=256 \
+  --first_train_batch_size=2048 \
   --gamma_distill_factor=5 \
   --hidden_distill_factor=100 \
   --init_checkpoint=gs://arabert-mobilebert/arabert/arabert_model.ckpt.index \
@@ -21,13 +23,14 @@ python3 run_pretraining.py \
   --learning_rate=0.0015 \
   --max_predictions_per_seq=20 \
   --max_seq_length=128 \
-  --num_distill_steps=1000 \
-  --num_train_steps=1000 \
-  --num_warmup_steps=1000 \
+  --num_distill_steps=500 \
+  --num_train_steps=25000 \
+  --num_warmup_steps=500 \
+  --iterations_per_loop=500 \
   --optimizer=lamb \
   --output_dir=${OUTPUT_DIR} \
-  --save_checkpoints_steps=1000 \
-  --train_batch_size=256 \
+  --save_checkpoints_steps=5000 \
+  --train_batch_size=2048 \
   --use_einsum \
   --use_summary \
   --use_tpu \

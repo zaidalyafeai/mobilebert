@@ -26,9 +26,9 @@ import numpy as np
 
 import tensorflow.compat.v1 as tf
 
-from mobilebert import modeling
-from mobilebert import optimization
-from mobilebert import tokenization
+import modeling
+import optimization
+import tokenization
 
 
 flags = tf.flags

@@ -1,0 +1,11 @@
+do evaluation on v3-8 
+num_train_steps (training done after distillation)
+num_distill_steps (disillation before) 
+we can run v3-128 on preemptible with batch size 2048
+discrepency between the num_attention_heads between arabert and mobilebert cause an error 
+reduced the mobilebert size to 26 M by reducing the num_att_heads=4 and vocab_size
+decreasing vocabsize in mobilelebert doesn't cause error 
+masked lm accuracy  on poems (10K lines) around 60% after 10K
+and 80% after 15K and then 90% after 20K. 
+It takes around 2 hours to run 20K iterations using the 26M mobilebert
+

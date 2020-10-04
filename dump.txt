@@ -1,0 +1,485 @@
+text_a: كان لم يروا قبلي ضروطا ولا بعدي
+text_b: كأن أكف الناس إن بنت عطفت
+label:None
+prediction:(30000,)
+
+text_a: كأن أكف الناس إن بنت عطفت
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: عليها حثاة القبر ذات الرواعد
+text_b: وأي أمرىء في أمرىء كنت في الوغى
+label:None
+prediction:(30000,)
+
+text_a: وأي أمرىء في أمرىء كنت في الوغى
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: إذا ما رأين السوق مثل السواعد
+text_b: وكان لبيت الفشعة الهدم والصبا
+label:None
+prediction:(30000,)
+
+text_a: وكان لبيت الفشعة الهدم والصبا
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: أحاديث منها عاليات الأراود
+text_b: وقد كان زينا للعشيرة مدرها
+label:None
+prediction:(30000,)
+
+text_a: وقد كان زينا للعشيرة مدرها
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: إذا ما تسامت للتخمط صيدها
+text_b: فيا عجبا للناس يستشرفونني
+label:None
+prediction:(30000,)
+
+text_a: فيا عجبا للناس يستشرفونني
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: كان لم يروا قبلي ضروطا ولا بعدي
+text_b: كأن أكف الناس إن بنت عطفت
+label:None
+prediction:(30000,)
+
+text_a: كأن أكف الناس إن بنت عطفت
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: عليها حثاة القبر ذات الرواعد
+text_b: وأي أمرىء في أمرىء كنت في الوغى
+label:None
+prediction:(30000,)
+
+text_a: وأي أمرىء في أمرىء كنت في الوغى
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: إذا ما رأين السوق مثل السواعد
+text_b: وكان لبيت الفشعة الهدم والصبا
+label:None
+prediction:(30000,)
+
+text_a: وكان لبيت الفشعة الهدم والصبا
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: أحاديث منها عاليات الأراود
+text_b: فيا عجبا للناس يستشرفونني
+label:None
+prediction:(30000,)
+
+text_a: فيا عجبا للناس يستشرفونني
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: كان لم يروا قبلي ضروطا ولا بعدي
+text_b: بليت ومل العائدون ورابني
+label:None
+prediction:(30000,)
+
+text_a: بليت ومل العائدون ورابني
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: تزايد أدوائي وفقد دوائيا
+text_b: وعطل من نفسي مكان رجائها
+label:None
+prediction:(30000,)
+
+text_a: وعطل من نفسي مكان رجائها
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: فإن لم يكن موت فكالموت ما بيا
+text_b: فيا أهل بيت الله من آل هاشم
+label:None
+prediction:(30000,)
+
+text_a: فيا أهل بيت الله من آل هاشم
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: أقروا برزإي أو فسدوا مكانيا
+text_b: يجرحه قوم ويرجون عفوه
+label:None
+prediction:(30000,)
+
+text_a: يجرحه قوم ويرجون عفوه
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: فكيف وآلام بجسمي كما هيا
+text_b: خليلي إني قد أراني ناعيا
+label:None
+prediction:(30000,)
+
+text_a: خليلي إني قد أراني ناعيا
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: لكم صحو نفسي فاتركوا صحوها ليا
+text_b: ألم يك في شرط السقاة عليكما
+label:None
+prediction:(30000,)
+
+text_a: ألم يك في شرط السقاة عليكما
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: بأن الندامى تترك العقل واهيا
+text_b: أيا وادي الأحباب سقيت واديا
+label:None
+prediction:(30000,)
+
+text_a: أيا وادي الأحباب سقيت واديا
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: ولا زلت مسقيا وإن كنت خاليا
+text_b: فلا تنس أطلال الدجيل ومائه
+label:None
+prediction:(30000,)
+
+text_a: فلا تنس أطلال الدجيل ومائه
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: ولا نخلات الدير إن كنت ساقيا
+text_b: ألا رب يوم قد لبست ظلاله
+label:None
+prediction:(30000,)
+
+text_a: ألا رب يوم قد لبست ظلاله
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: كما أغمد القين الحسام اليمانيا
+text_b: ولم أنس قمري الحمام عشية
+label:None
+prediction:(30000,)
+
+text_a: ولم أنس قمري الحمام عشية
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: على فرعها تدعو الحمام البواكيا
+text_b: إذا ما جرى حاكت رياض أزاهر
+label:None
+prediction:(30000,)
+
+text_a: إذا ما جرى حاكت رياض أزاهر
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: جوانبه وانصاع في الأرض جاريا
+text_b: وإن ثقبته العين لاقت قراره
+label:None
+prediction:(30000,)
+
+text_a: وإن ثقبته العين لاقت قراره
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: تخال الحصى فيها نجوما رواسيا
+text_b: فيالك شوقا بعد ما كدت أرعوي
+label:None
+prediction:(30000,)
+
+text_a: فيالك شوقا بعد ما كدت أرعوي
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: وأهجر أسباب الهوى والتصابيا
+text_b: وأصبحت أرفو الشيب وهو مرقع
+label:None
+prediction:(30000,)
+
+text_a: وأصبحت أرفو الشيب وهو مرقع
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: علي وأخفي منه ما ليس خافيا
+text_b: وقد كاد يكسوني الشباب جناحه
+label:None
+prediction:(30000,)
+
+text_a: وقد كاد يكسوني الشباب جناحه
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: فقد حاد عن رأسي وخلف ماضيا
+text_b: مضى فمضى طيب الحياة وأسخطت
+label:None
+prediction:(30000,)
+
+text_a: مضى فمضى طيب الحياة وأسخطت
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: خلائق دنيا كنت عنهن راضيا
+text_b: ولم آت ما قد حرم الله في الهوى
+label:None
+prediction:(30000,)
+
+text_a: ولم آت ما قد حرم الله في الهوى
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: ولم أترك مما عفا الله باقيا
+text_b: إذا ما تمشت في عين خريدة
+label:None
+prediction:(30000,)
+
+text_a: إذا ما تمشت في عين خريدة
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: فليست تخطاني إلى من ورائيا
+text_b: فيا عاذلي دعني وشأني ولا تكن
+label:None
+prediction:(30000,)
+
+text_a: فيا عاذلي دعني وشأني ولا تكن
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: شج في الذي أهوى ودعني لما بيا
+text_b: وليل كجلباب الشباب قطعته
+label:None
+prediction:(30000,)
+
+text_a: وليل كجلباب الشباب قطعته
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: بفتيان صدق لا تمل الأمانيا
+text_b: سروا ثم حطوا عن قلاص خوامس
+label:None
+prediction:(30000,)
+
+text_a: سروا ثم حطوا عن قلاص خوامس
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: كما عطل الرامي القسي الحوانيا
+text_b: ألم تعلما يا عاذلي بأنما
+label:None
+prediction:(30000,)
+
+text_a: ألم تعلما يا عاذلي بأنما
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: يميني مرعى في الندى وشماليا
+text_b: وأعددت للحرب العوان طمرة
+label:None
+prediction:(30000,)
+
+text_a: وأعددت للحرب العوان طمرة
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: وأسمر مطرور الحديدة عاليا
+text_b: ولا بد من حتف يلاقيك يومه
+label:None
+prediction:(30000,)
+
+text_a: ولا بد من حتف يلاقيك يومه
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: فلا تجزعن من ميتة هي ما هيا
+text_b: وجمع سقينا أرضه من دمائه
+label:None
+prediction:(30000,)
+
+text_a: وجمع سقينا أرضه من دمائه
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: ولو كان عافانا قبلنا العوافيا
+text_b: ودسناهم بالضرب والطعن دوسة
+label:None
+prediction:(30000,)
+
+text_a: ودسناهم بالضرب والطعن دوسة
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: أماتت حقودا ثم أحيت معاليا
+text_b: خذو حظكم من خيرنا إن شرنا
+label:None
+prediction:(30000,)
+
+text_a: خذو حظكم من خيرنا إن شرنا
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: مع الشر لا يزداد إلا تماديا
+text_b: فرشنا لكم منا جناح مودة
+label:None
+prediction:(30000,)
+
+text_a: فرشنا لكم منا جناح مودة
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: وأنتم زمانا تلجثون الدواهيا
+text_b: أظنكم من حاطب الليل جمعت
+label:None
+prediction:(30000,)
+
+text_a: أظنكم من حاطب الليل جمعت
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: حبائله عقاربا وأفاعيا
+text_b: إلى الله أشكو إنه موضع الشكوى
+label:None
+prediction:(30000,)
+
+text_a: إلى الله أشكو إنه موضع الشكوى
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: فقد صد عني بالمودة من أهوى
+text_b: لعمري لأهل العشق فيما يصيبهم
+label:None
+prediction:(30000,)
+
+text_a: لعمري لأهل العشق فيما يصيبهم
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: أحق بأن يبكى عليهم من الموتى
+text_b: يميت الهوى قوما فيلقون راحة
+label:None
+prediction:(30000,)
+
+text_a: يميت الهوى قوما فيلقون راحة
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: من الضر والجهد المبرح والبلوى
+text_b: ويحيا به قوم أصابوا هواهم
+label:None
+prediction:(30000,)
+
+text_a: ويحيا به قوم أصابوا هواهم
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: وقد صرت فيهم لا أموت ولا أحيا
+text_b: وإني لأشقى الخلق إن دام ما أرى
+label:None
+prediction:(30000,)
+
+text_a: وإني لأشقى الخلق إن دام ما أرى
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: ولم يسعد الوصل المؤمل في الدنيا
+text_b: ألا إن شمس الأرض فيما يقال لي
+label:None
+prediction:(30000,)
+
+text_a: ألا إن شمس الأرض فيما يقال لي
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: تمشت على شمس فطوبى لها طوبى
+text_b: فقولي لها يا شمس عني ما الذي
+label:None
+prediction:(30000,)
+
+text_a: فقولي لها يا شمس عني ما الذي
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: يسرك في قتلي أما لك من بقيا
+text_b: تصدين عني أن شكوت صبابتي
+label:None
+prediction:(30000,)
+
+text_a: تصدين عني أن شكوت صبابتي
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: ولو تفهم الأخرى تحملت الأخرى
+text_b: يدل على ما بالمحب من الهوى
+label:None
+prediction:(30000,)
+
+text_a: يدل على ما بالمحب من الهوى
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: تقلب عينيه إلى شخص من يهوى
+text_b: وإن أضمر الحب الذي في فؤاده
+label:None
+prediction:(30000,)
+
+text_a: وإن أضمر الحب الذي في فؤاده
+text_b: 
+label:None
+prediction:(30000,)
+
+text_a: فإن الذي في العين والوجه لا يخفى
+text_b: أزين نساء العالمين أجيبي
+label:None
+prediction:(30000,)
+

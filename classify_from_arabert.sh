@@ -1,24 +1,20 @@
 
-export DATA_DIR=gs://arabert-mobilebert/qa-data/
-export OUTPUT_DIR=gs://arabert-mobilebert/qa-model/
+export DATA_DIR=gs://arabert-mobilebert/cs-data/
+export OUTPUT_DIR=gs://arabert-mobilebert/cs-model/
 export TPU_NAME=arabert-mobilebert
-python3 run_squad.py \
+python3 run_classifier.py \
 	--bert_config_file=config/mobilebert_qa.json \
+	--task_name=sst-2\
 	--data_dir=${DATA_DIR} \
 	--do_train \
-	--doc_stride=128 \
-	--init_checkpoint=gs://arabert-mobilebert/mobilebert-ckpt/model.ckpt-9000 \
+	--init_checkpoint=gs://arabert-mobilebert/mobilebert-ckpt/model.ckpt-470000 \
 	--learning_rate=4e-05 \
-	--predict_file=arcd_squadv3.json \
-  	--do_predict \
-	--max_answer_length=30 \
-	--max_query_length=64 \
+  	--do_eval \
 	--max_seq_length=384 \
-	--n_best_size=20 \
 	--num_train_epochs=1 \
 	--output_dir=${OUTPUT_DIR} \
-	--train_batch_size=16 \
-	--train_file=arcd_squadv3.json \
+	--train_batch_size=64 \
+	--data_dir=../hard \
 	--use_tpu \
 	--tpu_name=${TPU_NAME} \
 	--vocab_file=gs://arabert-mobilebert/arabert/vocab.txt \

@@ -301,7 +301,6 @@ def read_squad_examples(input_file, is_training):
                 "For training, each question should have exactly 1 answer.")
           if not is_impossible:
             answer = qa["answers"][0]
-            print(answer)
             orig_answer_text = answer["text"]
             answer_offset = answer["answer_start"]
             answer_length = len(orig_answer_text)
