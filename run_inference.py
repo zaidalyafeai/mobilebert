@@ -71,7 +71,7 @@ flags.DEFINE_integer(
     "than this will be padded. Must match data generation.")
 
 flags.DEFINE_integer(
-    "max_predictions_per_seq", 20,
+    "max_predictions_per_seq", 1,
     "Maximum number of masked LM predictions per sequence. "
     "Must match data generation.")
 
@@ -494,7 +494,7 @@ class PaddingInputExample(object):
   """
 
 def convert_single_example(ex_index, example, label_list, max_seq_length,
-                           tokenizer, max_predictions_per_seq = 20):
+                           tokenizer, max_predictions_per_seq = 1):
   """Converts a single `InputExample` into a single `InputFeatures`."""
 
   if isinstance(example, PaddingInputExample):
@@ -638,7 +638,7 @@ def convert_examples_to_features(examples, label_list, max_seq_length,
   return features
 
 def input_fn_builder(features, seq_length, is_training, drop_remainder, 
-        max_predictions_per_seq = 20):
+        max_predictions_per_seq = 1):
   """Creates an `input_fn` closure to be passed to TPUEstimator."""
 
   all_input_ids = []
@@ -772,6 +772,7 @@ def main(_):
       print('%s\t %s\n' % (example.text_a.replace('0', '---'), example.text_b.replace('0', '---')))
       tokens = tokenizer.convert_ids_to_tokens(prediction['indices'])
       probs  = prediction['probs']
+      #print(tokens, probs)
       stmts.append(example.text_a.replace('0', '---') +'\t'+example.text_b.replace('0', '---'))
       pred.append(tokens)
       for i in range(len(tokens)):

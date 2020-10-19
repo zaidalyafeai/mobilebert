@@ -1,0 +1,23 @@
+export OUTPUT_DIR=gs://arabert-mobilebert/ibert-ckpt
+export TPU_NAME=arabert-mobilebert
+export DATA=gs://arabert-mobilebert/poems/tf_examples.tfrecord
+python3 run_pretraining.py \
+  --first_input_file=${DATA} \
+  --input_file=${DATA} \
+  --output_dir=${OUTPUT_DIR} \
+  --do_train=True \
+  --do_eval=True \
+  --bert_config_file=config/uncased_L-24_H-1024_A-4_bottleneck.json \
+  --first_num_train_steps=50000 \
+  --train_batch_size=2048 \
+  --eval_batch_size=128 \
+  --first_max_seq=128 \
+  --save_checkpoint_steps=10000 \
+  --iterations_per_loop=1000 \
+  --num_warmup_steps=10000 \
+  --learning_rate=1e-4 \
+  --optimizer=lamb \
+  --use_einsum=True \
+  --use_summary=True \
+  --use_tpu \
+  --tpu_name=${TPU_NAME} \

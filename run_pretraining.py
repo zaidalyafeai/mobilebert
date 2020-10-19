@@ -492,6 +492,7 @@ def model_fn_builder(bert_config,
         else:
           tf.train.init_from_checkpoint(init_checkpoint, assignment_map)
       elif bert_teacher_config is not None:
+        tf.logging.info("**** Init from teach ckpt ****")
         # Initializes from the pre-trained checkpoint only for teacher model
         # and embeddings for distillation.
         (assignment_map, initialized_variable_names
@@ -500,6 +501,8 @@ def model_fn_builder(bert_config,
         (teacher_assignment_map, teacher_initialized_variable_names
         ) = modeling.get_assignment_map_from_checkpoint(
             tvars, init_checkpoint, init_from_teacher=True)
+        #tf.logging.info(initialized_variable_names)
+        tf.logging.info(teacher_initialized_variable_names)
         if use_tpu:
 
           def teacher_tpu_scaffold():
@@ -527,7 +530,6 @@ def model_fn_builder(bert_config,
         total_size += functools.reduce(lambda x, y: x * y,
                                        var.get_shape().as_list())
     tf.logging.info("  total variable parameters: %d", total_size)
-
     output_spec = None
     if mode == tf.estimator.ModeKeys.TRAIN:
       if layer_wise_warmup:

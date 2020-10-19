@@ -1,0 +1,1664 @@
+WARNING:tensorflow:From run_pretraining.py:820: The name tf.estimator.tpu.InputPipelineConfig is deprecated. Please use tf.compat.v1.estimator.tpu.InputPipelineConfig instead.
+
+W1017 15:43:26.679028 140715017115392 module_wrapper.py:139] From run_pretraining.py:820: The name tf.estimator.tpu.InputPipelineConfig is deprecated. Please use tf.compat.v1.estimator.tpu.InputPipelineConfig instead.
+
+WARNING:tensorflow:From run_pretraining.py:875: The name tf.estimator.tpu.RunConfig is deprecated. Please use tf.compat.v1.estimator.tpu.RunConfig instead.
+
+W1017 15:43:26.679437 140715017115392 module_wrapper.py:139] From run_pretraining.py:875: The name tf.estimator.tpu.RunConfig is deprecated. Please use tf.compat.v1.estimator.tpu.RunConfig instead.
+
+WARNING:tensorflow:From run_pretraining.py:881: The name tf.estimator.tpu.TPUConfig is deprecated. Please use tf.compat.v1.estimator.tpu.TPUConfig instead.
+
+W1017 15:43:26.679574 140715017115392 module_wrapper.py:139] From run_pretraining.py:881: The name tf.estimator.tpu.TPUConfig is deprecated. Please use tf.compat.v1.estimator.tpu.TPUConfig instead.
+
+I1017 15:43:26.682451 140715017115392 discovery.py:271] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I1017 15:43:26.717492 140715017115392 discovery.py:867] URL being requested: GET https://tpu.googleapis.com/v1/projects/arabert/locations/europe-west4-a/nodes/arabert-mobilebert?alt=json
+I1017 15:43:26.717646 140715017115392 transport.py:157] Attempting refresh to obtain initial access_token
+I1017 15:43:26.774320 140715017115392 discovery.py:271] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I1017 15:43:26.845397 140715017115392 discovery.py:867] URL being requested: GET https://tpu.googleapis.com/v1/projects/arabert/locations/europe-west4-a/nodes/arabert-mobilebert?alt=json
+I1017 15:43:26.845542 140715017115392 transport.py:157] Attempting refresh to obtain initial access_token
+INFO:tensorflow:*** Input Files ***
+I1017 15:43:26.962013 140715017115392 run_pretraining.py:941] *** Input Files ***
+INFO:tensorflow:  gs://arabert-mobilebert/books/tf_examples.tfrecord
+I1017 15:43:26.962188 140715017115392 run_pretraining.py:943]   gs://arabert-mobilebert/books/tf_examples.tfrecord
+INFO:tensorflow:  gs://arabert-mobilebert/eval/tf_examples.tfrecord
+I1017 15:43:26.962242 140715017115392 run_pretraining.py:943]   gs://arabert-mobilebert/eval/tf_examples.tfrecord
+INFO:tensorflow:  gs://arabert-mobilebert/twitter/tf_examples.tfrecord
+I1017 15:43:26.962289 140715017115392 run_pretraining.py:943]   gs://arabert-mobilebert/twitter/tf_examples.tfrecord
+INFO:tensorflow:  gs://arabert-mobilebert/wiki/tf_examples.tfrecord00
+I1017 15:43:26.962332 140715017115392 run_pretraining.py:943]   gs://arabert-mobilebert/wiki/tf_examples.tfrecord00
+INFO:tensorflow:  gs://arabert-mobilebert/wiki/tf_examples.tfrecord01
+I1017 15:43:26.962374 140715017115392 run_pretraining.py:943]   gs://arabert-mobilebert/wiki/tf_examples.tfrecord01
+WARNING:tensorflow:From run_pretraining.py:947: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+W1017 15:43:26.962499 140715017115392 module_wrapper.py:139] From run_pretraining.py:947: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+WARNING:tensorflow:Estimator's model_fn (<function model_fn_builder.<locals>.model_fn at 0x7ffa68fce6a8>) includes params argument, but params are not passed to Estimator.
+W1017 15:43:26.962675 140715017115392 estimator.py:1994] Estimator's model_fn (<function model_fn_builder.<locals>.model_fn at 0x7ffa68fce6a8>) includes params argument, but params are not passed to Estimator.
+INFO:tensorflow:Using config: {'_session_config': allow_soft_placement: true
+cluster_def {
+  job {
+    name: "worker"
+    tasks {
+      key: 0
+      value: "10.240.1.2:8470"
+    }
+  }
+}
+isolate_session_state: true
+, '_eval_distribute': None, '_experimental_distribute': None, '_save_checkpoints_secs': None, '_log_step_count_steps': None, '_keep_checkpoint_max': 0, '_model_dir': 'gs://arabert-mobilebert/ibert-ckpt', '_global_id_in_cluster': 0, '_tpu_config': TPUConfig(iterations_per_loop=500, num_shards=None, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None, eval_training_input_configuration=2, experimental_host_call_every_n_steps=1), '_keep_checkpoint_every_n_hours': 10000, '_tf_random_seed': None, '_cluster': <tensorflow.python.distribute.cluster_resolver.tpu_cluster_resolver.TPUClusterResolver object at 0x7ffa68fedf98>, '_train_distribute': None, '_num_ps_replicas': 0, '_task_type': 'worker', '_protocol': None, '_save_summary_steps': 100, '_is_chief': True, '_service': None, '_task_id': 0, '_num_worker_replicas': 1, '_session_creation_timeout_secs': 7200, '_save_checkpoints_steps': 1000, '_evaluation_master': 'grpc://10.240.1.2:8470', '_master': 'grpc://10.240.1.2:8470', '_device_fn': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7ffa68fcdeb8>, '_experimental_max_worker_delay_secs': None}
+I1017 15:43:26.963605 140715017115392 estimator.py:212] Using config: {'_session_config': allow_soft_placement: true
+cluster_def {
+  job {
+    name: "worker"
+    tasks {
+      key: 0
+      value: "10.240.1.2:8470"
+    }
+  }
+}
+isolate_session_state: true
+, '_eval_distribute': None, '_experimental_distribute': None, '_save_checkpoints_secs': None, '_log_step_count_steps': None, '_keep_checkpoint_max': 0, '_model_dir': 'gs://arabert-mobilebert/ibert-ckpt', '_global_id_in_cluster': 0, '_tpu_config': TPUConfig(iterations_per_loop=500, num_shards=None, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None, eval_training_input_configuration=2, experimental_host_call_every_n_steps=1), '_keep_checkpoint_every_n_hours': 10000, '_tf_random_seed': None, '_cluster': <tensorflow.python.distribute.cluster_resolver.tpu_cluster_resolver.TPUClusterResolver object at 0x7ffa68fedf98>, '_train_distribute': None, '_num_ps_replicas': 0, '_task_type': 'worker', '_protocol': None, '_save_summary_steps': 100, '_is_chief': True, '_service': None, '_task_id': 0, '_num_worker_replicas': 1, '_session_creation_timeout_secs': 7200, '_save_checkpoints_steps': 1000, '_evaluation_master': 'grpc://10.240.1.2:8470', '_master': 'grpc://10.240.1.2:8470', '_device_fn': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7ffa68fcdeb8>, '_experimental_max_worker_delay_secs': None}
+INFO:tensorflow:_TPUContext: eval_on_tpu True
+I1017 15:43:26.963894 140715017115392 tpu_context.py:220] _TPUContext: eval_on_tpu True
+INFO:tensorflow:***** Running training *****
+I1017 15:43:26.964370 140715017115392 run_pretraining.py:955] ***** Running training *****
+INFO:tensorflow:  Batch size = 128
+I1017 15:43:26.964449 140715017115392 run_pretraining.py:956]   Batch size = 128
+INFO:tensorflow:Querying Tensorflow master (grpc://10.240.1.2:8470) for TPU system metadata.
+I1017 15:43:27.032207 140715017115392 tpu_system_metadata.py:78] Querying Tensorflow master (grpc://10.240.1.2:8470) for TPU system metadata.
+2020-10-17 15:43:27.033409: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+INFO:tensorflow:Found TPU system:
+I1017 15:43:27.044198 140715017115392 tpu_system_metadata.py:148] Found TPU system:
+INFO:tensorflow:*** Num TPU Cores: 8
+I1017 15:43:27.044307 140715017115392 tpu_system_metadata.py:149] *** Num TPU Cores: 8
+INFO:tensorflow:*** Num TPU Workers: 1
+I1017 15:43:27.044370 140715017115392 tpu_system_metadata.py:150] *** Num TPU Workers: 1
+INFO:tensorflow:*** Num TPU Cores Per Worker: 8
+I1017 15:43:27.044420 140715017115392 tpu_system_metadata.py:152] *** Num TPU Cores Per Worker: 8
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, -1, 7714657460536180104)
+I1017 15:43:27.044469 140715017115392 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, -1, 7714657460536180104)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 17179869184, 14486951276817083931)
+I1017 15:43:27.044906 140715017115392 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 17179869184, 14486951276817083931)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 17179869184, 4781380230499060578)
+I1017 15:43:27.044974 140715017115392 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 17179869184, 4781380230499060578)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 17179869184, 12937129909388627555)
+I1017 15:43:27.045042 140715017115392 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 17179869184, 12937129909388627555)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 17179869184, 16150040779323673035)
+I1017 15:43:27.045100 140715017115392 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 17179869184, 16150040779323673035)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 17179869184, 9703432855133056404)
+I1017 15:43:27.045156 140715017115392 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 17179869184, 9703432855133056404)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 17179869184, 6087219347569120435)
+I1017 15:43:27.045211 140715017115392 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 17179869184, 6087219347569120435)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 17179869184, 15473470937450100798)
+I1017 15:43:27.045266 140715017115392 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 17179869184, 15473470937450100798)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 17179869184, 1123764492347601962)
+I1017 15:43:27.045321 140715017115392 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 17179869184, 1123764492347601962)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 16601005598363521094)
+I1017 15:43:27.045377 140715017115392 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 16601005598363521094)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 17179869184, 1849706089390683370)
+I1017 15:43:27.045433 140715017115392 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 17179869184, 1849706089390683370)
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+W1017 15:43:27.050525 140715017115392 deprecation.py:506] From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+W1017 15:43:27.050915 140715017115392 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+INFO:tensorflow:Calling model_fn.
+I1017 15:43:27.061339 140715017115392 estimator.py:1148] Calling model_fn.
+WARNING:tensorflow:From run_pretraining.py:783: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W1017 15:43:27.316143 140715017115392 deprecation.py:323] From run_pretraining.py:783: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+INFO:tensorflow:Found small feature: next_sentence_labels [16, 1]
+I1017 15:43:27.345562 140715017115392 tpu_estimator.py:1201] Found small feature: next_sentence_labels [16, 1]
+INFO:tensorflow:Found small feature: next_sentence_labels [16, 1]
+I1017 15:43:27.347090 140715017115392 tpu_estimator.py:1201] Found small feature: next_sentence_labels [16, 1]
+INFO:tensorflow:Found small feature: next_sentence_labels [16, 1]
+I1017 15:43:27.348623 140715017115392 tpu_estimator.py:1201] Found small feature: next_sentence_labels [16, 1]
+INFO:tensorflow:Found small feature: next_sentence_labels [16, 1]
+I1017 15:43:27.350250 140715017115392 tpu_estimator.py:1201] Found small feature: next_sentence_labels [16, 1]
+INFO:tensorflow:Found small feature: next_sentence_labels [16, 1]
+I1017 15:43:27.351872 140715017115392 tpu_estimator.py:1201] Found small feature: next_sentence_labels [16, 1]
+INFO:tensorflow:Found small feature: next_sentence_labels [16, 1]
+I1017 15:43:27.353379 140715017115392 tpu_estimator.py:1201] Found small feature: next_sentence_labels [16, 1]
+INFO:tensorflow:Found small feature: next_sentence_labels [16, 1]
+I1017 15:43:27.354999 140715017115392 tpu_estimator.py:1201] Found small feature: next_sentence_labels [16, 1]
+INFO:tensorflow:Found small feature: next_sentence_labels [16, 1]
+I1017 15:43:27.356875 140715017115392 tpu_estimator.py:1201] Found small feature: next_sentence_labels [16, 1]
+2020-10-17 15:43:27.372976: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2020-10-17 15:43:27.373003: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2020-10-17 15:43:27.373091: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (arabert-mobilebert): /proc/driver/nvidia/version does not exist
+INFO:tensorflow:*** Features ***
+I1017 15:43:27.389203 140715017115392 run_pretraining.py:241] *** Features ***
+INFO:tensorflow:  name = input_ids, shape = (16, 512)
+I1017 15:43:27.389350 140715017115392 run_pretraining.py:243]   name = input_ids, shape = (16, 512)
+INFO:tensorflow:  name = input_mask, shape = (16, 512)
+I1017 15:43:27.389430 140715017115392 run_pretraining.py:243]   name = input_mask, shape = (16, 512)
+INFO:tensorflow:  name = masked_lm_ids, shape = (16, 20)
+I1017 15:43:27.389497 140715017115392 run_pretraining.py:243]   name = masked_lm_ids, shape = (16, 20)
+INFO:tensorflow:  name = masked_lm_positions, shape = (16, 20)
+I1017 15:43:27.389560 140715017115392 run_pretraining.py:243]   name = masked_lm_positions, shape = (16, 20)
+INFO:tensorflow:  name = masked_lm_weights, shape = (16, 20)
+I1017 15:43:27.389632 140715017115392 run_pretraining.py:243]   name = masked_lm_weights, shape = (16, 20)
+INFO:tensorflow:  name = next_sentence_labels, shape = (16, 1)
+I1017 15:43:27.389705 140715017115392 run_pretraining.py:243]   name = next_sentence_labels, shape = (16, 1)
+INFO:tensorflow:  name = segment_ids, shape = (16, 512)
+I1017 15:43:27.389779 140715017115392 run_pretraining.py:243]   name = segment_ids, shape = (16, 512)
+WARNING:tensorflow:From run_pretraining.py:620: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.Dense instead.
+W1017 15:43:33.359713 140715017115392 deprecation.py:323] From run_pretraining.py:620: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.Dense instead.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/layers/core.py:187: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+W1017 15:43:33.361134 140715017115392 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/layers/core.py:187: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+INFO:tensorflow:**** Trainable Variables ****
+I1017 15:43:33.610669 140715017115392 run_pretraining.py:519] **** Trainable Variables ****
+INFO:tensorflow:  name = bert/embeddings/word_embeddings:0, shape = (30522, 128)
+I1017 15:43:33.610893 140715017115392 run_pretraining.py:528]   name = bert/embeddings/word_embeddings:0, shape = (30522, 128)
+INFO:tensorflow:  name = bert/embeddings/embedding_transformation/kernel:0, shape = (384, 512)
+I1017 15:43:33.611013 140715017115392 run_pretraining.py:528]   name = bert/embeddings/embedding_transformation/kernel:0, shape = (384, 512)
+INFO:tensorflow:  name = bert/embeddings/embedding_transformation/bias:0, shape = (512,)
+I1017 15:43:33.611086 140715017115392 run_pretraining.py:528]   name = bert/embeddings/embedding_transformation/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/embeddings/token_type_embeddings:0, shape = (2, 512)
+I1017 15:43:33.611151 140715017115392 run_pretraining.py:528]   name = bert/embeddings/token_type_embeddings:0, shape = (2, 512)
+INFO:tensorflow:  name = bert/embeddings/position_embeddings:0, shape = (512, 512)
+I1017 15:43:33.611239 140715017115392 run_pretraining.py:528]   name = bert/embeddings/position_embeddings:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.611307 140715017115392 run_pretraining.py:528]   name = bert/embeddings/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.611369 140715017115392 run_pretraining.py:528]   name = bert/embeddings/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.611428 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.611492 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.611571 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.611633 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.611707 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.611782 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.611840 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.611911 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.611971 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.612034 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.612092 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.612155 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.612232 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.612293 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.612363 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.612425 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.612502 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.612569 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.612639 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.612697 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.612754 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.612816 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.612895 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.612956 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_0/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.613014 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.613076 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.613136 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.613194 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.613251 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.613331 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.613393 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.613458 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.613520 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.613586 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.613648 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.613713 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.613774 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.613834 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.613901 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.613974 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.614037 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.614103 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.614165 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.614225 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.614295 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.614376 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.614438 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.614506 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_1/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.614562 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.614624 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.614682 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.614739 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.614795 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.614856 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.614921 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.614983 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.615042 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.615109 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.615167 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.615277 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.615368 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.615436 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.615504 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.615577 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.615647 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.615720 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.615788 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.615855 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.615931 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.616004 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.616071 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.616138 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_2/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.616205 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.616277 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.616350 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.616418 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.616497 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.616567 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.616632 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.616703 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.616768 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.616837 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.616910 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.616980 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.617047 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.617112 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.617178 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.617249 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.617314 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.617384 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.617450 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.617515 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.617583 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.617654 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.617719 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.617783 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_3/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.617848 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.617925 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.618003 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.618064 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.618124 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.618190 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.618252 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.618317 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.618381 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.618448 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.618509 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.618576 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.618637 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.618698 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.618763 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.618830 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.618898 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.618988 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.619054 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.619118 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.619207 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.619279 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.619341 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.619402 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_4/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.619463 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.619529 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.619590 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.619672 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.619748 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.619815 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.619883 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.619954 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.620017 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.620084 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.620146 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.620213 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.620274 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.620334 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.620393 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.620470 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.620549 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.620615 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.620677 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.620738 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.620799 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.620871 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.620935 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.620996 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_5/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.621057 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.621128 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.621191 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.621252 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.621313 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.621378 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.621440 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.621507 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.621570 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.621635 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.621697 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.621763 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.621825 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.621910 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.621977 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.622058 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.622120 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.622187 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.622248 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.622314 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.622375 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.622441 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.622503 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.622571 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_6/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.622628 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.622709 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.622770 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.622840 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.622905 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.622966 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.623024 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.623087 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.623164 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.623256 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.623315 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.623377 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.623441 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.623519 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.623579 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.623646 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.623707 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.623772 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.623834 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.623903 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.623965 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.624032 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.624093 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.624154 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_7/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.624215 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.624292 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.624349 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.624407 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.624463 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.624525 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.624611 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.624684 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.624742 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.624824 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.624893 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.624960 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.625022 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.625082 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.625143 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.625209 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.625304 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.625378 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.625446 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.625513 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.625580 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.625653 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.625722 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.625795 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_8/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.625869 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.625944 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.626012 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.626080 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.626148 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.626221 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.626291 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.626364 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.626444 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.626515 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.626582 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.626652 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.626720 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.626785 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.626849 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.626929 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.626996 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.627071 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.627138 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.627219 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.627287 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.627358 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.627424 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.627488 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_9/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.627553 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.627632 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.627693 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.627754 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.627814 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.627886 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.627948 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.628022 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.628101 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.628166 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.628227 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.628297 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.628360 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.628421 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.628482 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.628561 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.628625 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.628692 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.628755 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.628817 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.628884 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.628951 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.629012 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.629073 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_10/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.629133 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.629199 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.629271 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.629328 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.629389 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.629451 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.629509 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.629572 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.629631 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.629692 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.629750 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.629811 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.629874 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.629933 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.629991 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.630053 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.630112 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.630174 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.630233 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.630290 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.630346 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.630408 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.630472 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.630529 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_11/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.630586 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.630648 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.630707 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.630764 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.630821 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.630889 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.630948 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.631009 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.631067 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.631129 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.631201 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.631268 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.631326 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.631383 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.631440 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_12/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.631507 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.631566 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.631628 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.631686 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.631743 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.631800 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.631867 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.631928 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.631985 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_12/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.632042 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.632104 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.632162 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.632220 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.632277 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.632339 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.632397 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.632458 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.632516 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.632583 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.632641 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.632703 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.632762 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.632818 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.632881 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_13/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.632945 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.633002 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.633065 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.633123 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.633181 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.633238 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.633299 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.633357 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.633414 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_13/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.633471 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.633532 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.633594 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.633651 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.633708 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.633770 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.633827 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.633895 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.633954 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.634015 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.634073 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.634135 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.634192 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.634249 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.634305 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_14/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.634367 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.634425 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.634485 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.634542 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.634600 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.634661 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.634723 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.634780 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.634837 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_14/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.634900 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.634983 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.635054 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.635110 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.635167 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.635254 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.635341 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.635414 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.635483 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.635555 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.635624 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.635698 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.635765 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.635837 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.635913 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_15/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.635987 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.636057 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.636131 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.636200 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.636268 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.636336 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.636419 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.636484 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.636550 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_15/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.636615 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.636686 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.636752 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.636817 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.636888 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.636960 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.637030 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.637103 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.637169 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.637240 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.637306 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.637377 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.637443 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.637508 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.637572 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_16/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.637643 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.637709 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.637778 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.637844 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.637924 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.637986 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.638051 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.638113 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.638174 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_16/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.638239 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.638306 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.638367 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.638428 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.638489 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.638554 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.638616 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.638682 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.638745 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.638811 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.638880 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.638949 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.639030 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.639106 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.639167 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_17/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.639250 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.639332 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.639419 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.639482 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.639544 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.639604 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.639670 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.639731 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.639802 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_17/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.639860 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.639928 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.639986 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.640043 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.640100 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.640161 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.640219 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.640281 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.640338 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.640400 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.640457 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.640525 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.640584 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.640641 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.640699 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_18/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.640761 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.640819 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.640888 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.640947 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.641005 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.641062 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.641124 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.641183 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.641241 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_18/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.641298 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.641360 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.641418 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.641475 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.641535 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.641598 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.641656 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.641717 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.641775 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.641836 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.641901 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.641981 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.642043 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.642104 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.642164 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_19/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.642230 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.642292 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.642358 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.642419 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.642479 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.642540 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.642605 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.642670 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.642740 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_19/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.642796 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.642857 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.642926 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.642984 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.643041 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.643102 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.643160 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.643238 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.643297 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.643359 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.643417 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.643479 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.643538 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.643596 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.643653 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_20/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.643722 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.643781 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.643843 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.643908 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.643965 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.644023 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.644085 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.644143 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.644200 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_20/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.644257 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.644320 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.644378 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.644435 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.644491 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.644553 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.644611 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.644673 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.644731 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.644796 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.644855 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.644923 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.644982 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.645040 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.645097 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_21/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.645159 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.645217 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.645340 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.645411 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.645478 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.645546 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.645619 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.645688 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.645755 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_21/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.645823 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.645902 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.645976 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.646044 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.646111 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.646185 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.646255 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.646328 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.646397 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.646492 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.646549 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.646610 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.646668 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.646725 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.646781 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_22/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.646843 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.646909 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.646971 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.647029 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.647086 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.647147 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.647224 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.647284 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.647341 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_22/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.647417 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/bottleneck/input/dense/bias:0, shape = (512,)
+I1017 15:43:33.647483 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.647545 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.647605 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/self/query/kernel:0, shape = (512, 512)
+I1017 15:43:33.647666 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/self/query/bias:0, shape = (512,)
+I1017 15:43:33.647732 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/self/key/kernel:0, shape = (512, 512)
+I1017 15:43:33.647792 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/self/key/bias:0, shape = (512,)
+I1017 15:43:33.647858 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/self/value/kernel:0, shape = (512, 512)
+I1017 15:43:33.647938 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/self/value/bias:0, shape = (512,)
+I1017 15:43:33.648000 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/output/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.648057 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.648118 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.648176 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.648237 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/intermediate/dense/kernel:0, shape = (512, 4096)
+I1017 15:43:33.648294 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_23/intermediate/dense/bias:0, shape = (4096,)
+I1017 15:43:33.648356 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/dense/kernel:0, shape = (4096, 512)
+I1017 15:43:33.648415 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/dense/bias:0, shape = (512,)
+I1017 15:43:33.648476 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.648535 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.648608 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.648665 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/bottleneck/dense/bias:0, shape = (512,)
+I1017 15:43:33.648726 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.648784 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.648841 140715017115392 run_pretraining.py:528]   name = bert/encoder/layer_23/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/pooler/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.648904 140715017115392 run_pretraining.py:528]   name = bert/pooler/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/pooler/dense/bias:0, shape = (512,)
+I1017 15:43:33.648967 140715017115392 run_pretraining.py:528]   name = bert/pooler/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = cls/predictions/transform/dense/kernel:0, shape = (512, 512)
+I1017 15:43:33.649026 140715017115392 run_pretraining.py:528]   name = cls/predictions/transform/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = cls/predictions/transform/dense/bias:0, shape = (512,)
+I1017 15:43:33.649088 140715017115392 run_pretraining.py:528]   name = cls/predictions/transform/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = cls/predictions/transform/LayerNorm/beta:0, shape = (512,)
+I1017 15:43:33.649146 140715017115392 run_pretraining.py:528]   name = cls/predictions/transform/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = cls/predictions/transform/LayerNorm/gamma:0, shape = (512,)
+I1017 15:43:33.649204 140715017115392 run_pretraining.py:528]   name = cls/predictions/transform/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = cls/predictions/output_bias:0, shape = (30522,)
+I1017 15:43:33.649261 140715017115392 run_pretraining.py:528]   name = cls/predictions/output_bias:0, shape = (30522,)
+INFO:tensorflow:  name = cls/predictions/extra_output_weights:0, shape = (30522, 384)
+I1017 15:43:33.649318 140715017115392 run_pretraining.py:528]   name = cls/predictions/extra_output_weights:0, shape = (30522, 384)
+INFO:tensorflow:  name = cls/seq_relationship/output_weights:0, shape = (2, 512)
+I1017 15:43:33.649386 140715017115392 run_pretraining.py:528]   name = cls/seq_relationship/output_weights:0, shape = (2, 512)
+INFO:tensorflow:  name = cls/seq_relationship/output_bias:0, shape = (2,)
+I1017 15:43:33.649448 140715017115392 run_pretraining.py:528]   name = cls/seq_relationship/output_bias:0, shape = (2,)
+INFO:tensorflow:  total variable parameters: 155341116
+I1017 15:43:33.649505 140715017115392 run_pretraining.py:532]   total variable parameters: 155341116
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/math_grad.py:1375: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W1017 15:43:33.930309 140715017115392 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/ops/math_grad.py:1375: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+/usr/local/lib/python3.5/dist-packages/tensorflow_core/python/framework/indexed_slices.py:424: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+WARNING:tensorflow:From run_pretraining.py:546: The name tf.estimator.tpu.TPUEstimatorSpec is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimatorSpec instead.
+
+W1017 15:44:07.344885 140715017115392 module_wrapper.py:139] From run_pretraining.py:546: The name tf.estimator.tpu.TPUEstimatorSpec is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimatorSpec instead.
+
+INFO:tensorflow:Create CheckpointSaverHook.
+I1017 15:44:07.407407 140715017115392 basic_session_run_hooks.py:541] Create CheckpointSaverHook.
+INFO:tensorflow:Done calling model_fn.
+I1017 15:44:08.300705 140715017115392 estimator.py:1150] Done calling model_fn.
+INFO:tensorflow:TPU job name worker
+I1017 15:44:14.781136 140715017115392 tpu_estimator.py:506] TPU job name worker
+INFO:tensorflow:Graph was finalized.
+I1017 15:44:17.900797 140715017115392 monitored_session.py:240] Graph was finalized.
+INFO:tensorflow:Running local_init_op.
+I1017 15:44:36.126583 140715017115392 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I1017 15:44:37.627615 140715017115392 session_manager.py:502] Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 0 into gs://arabert-mobilebert/ibert-ckpt/model.ckpt.
+I1017 15:45:02.072608 140715017115392 basic_session_run_hooks.py:606] Saving checkpoints for 0 into gs://arabert-mobilebert/ibert-ckpt/model.ckpt.
+INFO:tensorflow:gs://arabert-mobilebert/ibert-ckpt/model.ckpt-0 is not in all_model_checkpoint_paths. Manually adding it.
+I1017 15:45:18.402152 140715017115392 checkpoint_management.py:95] gs://arabert-mobilebert/ibert-ckpt/model.ckpt-0 is not in all_model_checkpoint_paths. Manually adding it.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:751: Variable.load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Prefer Variable.assign which has equivalent behavior in 2.X.
+W1017 15:45:25.394881 140715017115392 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:751: Variable.load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Prefer Variable.assign which has equivalent behavior in 2.X.
+INFO:tensorflow:Initialized dataset iterators in 1 seconds
+I1017 15:45:28.446970 140715017115392 util.py:98] Initialized dataset iterators in 1 seconds
+INFO:tensorflow:Installing graceful shutdown hook.
+I1017 15:45:28.447419 140715017115392 session_support.py:332] Installing graceful shutdown hook.
+2020-10-17 15:45:28.447764: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+INFO:tensorflow:Creating heartbeat manager for ['/job:worker/replica:0/task:0/device:CPU:0']
+I1017 15:45:28.452129 140715017115392 session_support.py:82] Creating heartbeat manager for ['/job:worker/replica:0/task:0/device:CPU:0']
+INFO:tensorflow:Configuring worker heartbeat: shutdown_mode: WAIT_FOR_COORDINATOR
+
+I1017 15:45:28.453744 140715017115392 session_support.py:105] Configuring worker heartbeat: shutdown_mode: WAIT_FOR_COORDINATOR
+
+INFO:tensorflow:Init TPU system
+I1017 15:45:28.456908 140715017115392 tpu_estimator.py:567] Init TPU system
+INFO:tensorflow:Initialized TPU in 3 seconds
+I1017 15:45:32.415381 140715017115392 tpu_estimator.py:576] Initialized TPU in 3 seconds
+INFO:tensorflow:Starting infeed thread controller.
+I1017 15:45:34.064014 140713013049088 tpu_estimator.py:521] Starting infeed thread controller.
+INFO:tensorflow:Starting outfeed thread controller.
+I1017 15:45:34.064514 140713004656384 tpu_estimator.py:540] Starting outfeed thread controller.
+I1017 15:45:34.112274 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:45:34.185545 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+INFO:tensorflow:Enqueue next (500) batch(es) of data to infeed.
+I1017 15:45:35.733645 140715017115392 tpu_estimator.py:600] Enqueue next (500) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (500) batch(es) of data from outfeed.
+I1017 15:45:35.733968 140715017115392 tpu_estimator.py:604] Dequeue next (500) batch(es) of data from outfeed.
+ERROR:tensorflow:Error recorded from infeed: From /job:worker/replica:0/task:0:
+{{function_node __inference_Dataset_map_<lambda>_82}} Key: input_ids.  Can't parse serialized Example.
+	 [[{{node ParseSingleExample/ParseSingleExample}}]]
+	 [[input_pipeline_task0/while/IteratorGetNext]]
+E1017 15:45:49.636789 140713013049088 error_handling.py:75] Error recorded from infeed: From /job:worker/replica:0/task:0:
+{{function_node __inference_Dataset_map_<lambda>_82}} Key: input_ids.  Can't parse serialized Example.
+	 [[{{node ParseSingleExample/ParseSingleExample}}]]
+	 [[input_pipeline_task0/while/IteratorGetNext]]
+ERROR:tensorflow:Closing session due to error From /job:worker/replica:0/task:0:
+{{function_node __inference_Dataset_map_<lambda>_82}} Key: input_ids.  Can't parse serialized Example.
+	 [[{{node ParseSingleExample/ParseSingleExample}}]]
+	 [[input_pipeline_task0/while/IteratorGetNext]]
+E1017 15:45:54.642396 140712987870976 error_handling.py:81] Closing session due to error From /job:worker/replica:0/task:0:
+{{function_node __inference_Dataset_map_<lambda>_82}} Key: input_ids.  Can't parse serialized Example.
+	 [[{{node ParseSingleExample/ParseSingleExample}}]]
+	 [[input_pipeline_task0/while/IteratorGetNext]]
+2020-10-17 15:45:59.856732: W tensorflow/core/distributed_runtime/rpc/grpc_remote_master.cc:157] RPC failed with status = "Unavailable: Socket closed" and grpc_error_string = "{"created":"@1602949559.856605195","description":"Error received from peer","file":"external/grpc/src/core/lib/surface/call.cc","file_line":1039,"grpc_message":"Socket closed","grpc_status":14}", maybe retrying the RPC
+2020-10-17 15:45:59.856753: W tensorflow/core/distributed_runtime/rpc/grpc_remote_master.cc:157] RPC failed with status = "Unavailable: Socket closed" and grpc_error_string = "{"created":"@1602949559.856633529","description":"Error received from peer","file":"external/grpc/src/core/lib/surface/call.cc","file_line":1039,"grpc_message":"Socket closed","grpc_status":14}", maybe retrying the RPC
+I1017 15:46:04.258885 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:46:04.320237 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+INFO:tensorflow:An error was raised. This may be due to a preemption in a connected worker or parameter server. The current session will be closed and a new session will be created. This error may also occur due to a gRPC failure caused by high memory or network bandwidth usage in the parameter servers. If this error occurs repeatedly, try increasing the number of parameter servers assigned to the job. Error: Session 09b6f14c22ea8b89 is not found.
+I1017 15:46:19.001153 140715017115392 monitored_session.py:1269] An error was raised. This may be due to a preemption in a connected worker or parameter server. The current session will be closed and a new session will be created. This error may also occur due to a gRPC failure caused by high memory or network bandwidth usage in the parameter servers. If this error occurs repeatedly, try increasing the number of parameter servers assigned to the job. Error: Session 09b6f14c22ea8b89 is not found.
+ERROR:tensorflow:
+
+
+Failed to close session after error.Other threads may hang.
+
+
+
+E1017 15:46:19.001816 140712987870976 error_handling.py:86] 
+
+
+Failed to close session after error.Other threads may hang.
+
+
+
+ERROR:tensorflow:Error recorded from outfeed: Step was cancelled by an explicit call to `Session::Close()`.
+E1017 15:46:19.002021 140713004656384 error_handling.py:75] Error recorded from outfeed: Step was cancelled by an explicit call to `Session::Close()`.
+INFO:tensorflow:Graph was finalized.
+I1017 15:46:19.002391 140715017115392 monitored_session.py:240] Graph was finalized.
+INFO:tensorflow:Restoring parameters from gs://arabert-mobilebert/ibert-ckpt/model.ckpt-0
+I1017 15:46:19.173603 140715017115392 saver.py:1284] Restoring parameters from gs://arabert-mobilebert/ibert-ckpt/model.ckpt-0
+I1017 15:46:34.399157 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:46:34.504611 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/training/saver.py:1069: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+W1017 15:46:38.981104 140715017115392 deprecation.py:323] From /usr/local/lib/python3.5/dist-packages/tensorflow_core/python/training/saver.py:1069: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+INFO:tensorflow:Running local_init_op.
+I1017 15:46:41.589804 140715017115392 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I1017 15:46:43.215214 140715017115392 session_manager.py:502] Done running local_init_op.
+I1017 15:47:04.718486 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:47:04.876548 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+INFO:tensorflow:Saving checkpoints for 0 into gs://arabert-mobilebert/ibert-ckpt/model.ckpt.
+I1017 15:47:08.496720 140715017115392 basic_session_run_hooks.py:606] Saving checkpoints for 0 into gs://arabert-mobilebert/ibert-ckpt/model.ckpt.
+INFO:tensorflow:Initialized dataset iterators in 1 seconds
+I1017 15:47:32.952914 140715017115392 util.py:98] Initialized dataset iterators in 1 seconds
+INFO:tensorflow:Installing graceful shutdown hook.
+I1017 15:47:32.953313 140715017115392 session_support.py:332] Installing graceful shutdown hook.
+2020-10-17 15:47:32.953752: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+INFO:tensorflow:Creating heartbeat manager for ['/job:worker/replica:0/task:0/device:CPU:0']
+I1017 15:47:32.957022 140715017115392 session_support.py:82] Creating heartbeat manager for ['/job:worker/replica:0/task:0/device:CPU:0']
+INFO:tensorflow:Configuring worker heartbeat: shutdown_mode: WAIT_FOR_COORDINATOR
+
+I1017 15:47:32.959489 140715017115392 session_support.py:105] Configuring worker heartbeat: shutdown_mode: WAIT_FOR_COORDINATOR
+
+INFO:tensorflow:Init TPU system
+I1017 15:47:32.970911 140715017115392 tpu_estimator.py:567] Init TPU system
+I1017 15:47:34.953407 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:47:35.016635 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+INFO:tensorflow:Initialized TPU in 8 seconds
+I1017 15:47:41.795600 140715017115392 tpu_estimator.py:576] Initialized TPU in 8 seconds
+INFO:tensorflow:Starting infeed thread controller.
+I1017 15:47:43.507258 140712987870976 tpu_estimator.py:521] Starting infeed thread controller.
+INFO:tensorflow:Starting outfeed thread controller.
+I1017 15:47:43.507699 140713013049088 tpu_estimator.py:540] Starting outfeed thread controller.
+I1017 15:47:43.554391 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:47:43.613054 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+INFO:tensorflow:Enqueue next (500) batch(es) of data to infeed.
+I1017 15:47:45.107033 140715017115392 tpu_estimator.py:600] Enqueue next (500) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (500) batch(es) of data from outfeed.
+I1017 15:47:45.107355 140715017115392 tpu_estimator.py:604] Dequeue next (500) batch(es) of data from outfeed.
+ERROR:tensorflow:Error recorded from infeed: From /job:worker/replica:0/task:0:
+{{function_node __inference_Dataset_map_<lambda>_82}} Key: input_mask.  Can't parse serialized Example.
+	 [[{{node ParseSingleExample/ParseSingleExample}}]]
+	 [[input_pipeline_task0/while/IteratorGetNext]]
+E1017 15:47:57.294653 140712987870976 error_handling.py:75] Error recorded from infeed: From /job:worker/replica:0/task:0:
+{{function_node __inference_Dataset_map_<lambda>_82}} Key: input_mask.  Can't parse serialized Example.
+	 [[{{node ParseSingleExample/ParseSingleExample}}]]
+	 [[input_pipeline_task0/while/IteratorGetNext]]
+I1017 15:48:05.096758 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:48:05.177202 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:48:13.681529 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:48:13.733356 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:48:35.248313 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:48:35.313628 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:48:43.801540 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:48:43.852869 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:49:05.392613 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:49:05.462296 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:49:13.921344 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:49:13.970314 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:49:35.544013 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:49:35.609019 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:49:44.041530 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:49:44.105455 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:50:05.687881 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:50:05.748596 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:50:14.175234 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:50:14.234562 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:50:35.823590 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:50:35.890526 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:50:44.285405 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:50:44.351294 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:51:05.981048 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:51:06.039582 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:51:14.418012 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:51:14.479431 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:51:36.115024 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:51:36.181295 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:51:44.550545 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:51:44.604336 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:52:06.262198 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:52:06.328140 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:52:14.673011 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:52:14.751908 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:52:36.371983 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:52:36.439095 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:52:44.822598 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:52:44.880825 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:53:06.519799 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:53:06.591844 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:53:14.947499 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:53:15.001336 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:53:36.661975 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:53:36.719951 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:53:45.070510 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:53:45.133966 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:54:06.795344 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:54:06.871828 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:54:15.204510 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:54:15.255648 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:54:36.943027 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:54:37.007520 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:54:45.326038 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:54:45.397216 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:55:07.094715 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:55:07.163290 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:55:15.461793 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:55:15.515741 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:55:37.241811 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:55:37.371644 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:55:45.588816 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:55:45.646164 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:56:07.454113 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:56:07.522812 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:56:15.701031 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:56:15.769472 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:56:37.611002 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:56:37.666506 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:56:45.835673 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:56:45.897105 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:57:07.752375 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:57:07.830156 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:57:15.969182 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:57:16.028097 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:57:37.908779 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:57:37.976669 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:57:46.107025 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:57:46.174302 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:58:08.052397 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:58:08.121437 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:58:16.244124 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:58:16.305212 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:58:38.207698 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:58:38.274584 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:58:46.373790 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:58:46.436384 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:59:08.355442 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:59:08.425427 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:59:16.478116 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:59:16.532262 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:59:38.532321 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:59:38.602105 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 15:59:46.600613 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 15:59:46.663440 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 16:00:08.690599 140712996263680 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 16:00:08.754336 140712996263680 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+I1017 16:00:16.733114 140712979478272 transport.py:157] Attempting refresh to obtain initial access_token
+WARNING:tensorflow:TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.
+W1017 16:00:16.795936 140712979478272 preempted_hook.py:91] TPUPollingThread found TPU b'arabert-mobilebert' in state READY, and health HEALTHY.

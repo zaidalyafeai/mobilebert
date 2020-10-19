@@ -1,10 +1,10 @@
-export OUTPUT_DIR=gs://arabert-mobilebert/mobilebert-ckptv7
+export OUTPUT_DIR=gs://arabert-mobilebert/mobilebert-tmp
 export TPU_NAME=arabert-mobilebert
 export DATA=gs://arabert-mobilebert/poems/tf_examples.tfrecord
 python3 run_pretraining.py \
   --attention_distill_factor=1 \
   --bert_config_file=config/mobilebert.json \
-  --bert_teacher_config_file=config/arabert.json \
+  --bert_teacher_config_file=config/uncased_L-24_H-1024_A-4_bottleneck.json \
   --beta_distill_factor=5000 \
   --distill_ground_truth_ratio=0.5 \
   --distill_temperature=1 \
@@ -17,14 +17,14 @@ python3 run_pretraining.py \
   --first_train_batch_size=2048 \
   --gamma_distill_factor=5 \
   --hidden_distill_factor=100 \
-  --init_checkpoint=gs://arabert-mobilebert/arabert/arabert_model.ckpt.index \
+  --init_checkpoint=gs://arabert-mobilebert/ibert-ckpt/model.ckpt-5000 \
   --input_file=${DATA} \
   --layer_wise_warmup \
   --learning_rate=0.0015 \
   --max_predictions_per_seq=20 \
   --max_seq_length=128 \
   --num_distill_steps=500 \
-  --num_train_steps=25000 \
+  --num_train_steps=10000 \
   --num_warmup_steps=500 \
   --iterations_per_loop=500 \
   --optimizer=lamb \
