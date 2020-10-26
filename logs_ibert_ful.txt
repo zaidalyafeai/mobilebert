@@ -1,0 +1,76 @@
+WARNING:tensorflow:From run_pretraining.py:820: The name tf.estimator.tpu.InputPipelineConfig is deprecated. Please use tf.compat.v1.estimator.tpu.InputPipelineConfig instead.
+
+W1021 13:26:31.326191 140460751279872 module_wrapper.py:139] From run_pretraining.py:820: The name tf.estimator.tpu.InputPipelineConfig is deprecated. Please use tf.compat.v1.estimator.tpu.InputPipelineConfig instead.
+
+WARNING:tensorflow:From run_pretraining.py:875: The name tf.estimator.tpu.RunConfig is deprecated. Please use tf.compat.v1.estimator.tpu.RunConfig instead.
+
+W1021 13:26:31.326573 140460751279872 module_wrapper.py:139] From run_pretraining.py:875: The name tf.estimator.tpu.RunConfig is deprecated. Please use tf.compat.v1.estimator.tpu.RunConfig instead.
+
+WARNING:tensorflow:From run_pretraining.py:881: The name tf.estimator.tpu.TPUConfig is deprecated. Please use tf.compat.v1.estimator.tpu.TPUConfig instead.
+
+W1021 13:26:31.326723 140460751279872 module_wrapper.py:139] From run_pretraining.py:881: The name tf.estimator.tpu.TPUConfig is deprecated. Please use tf.compat.v1.estimator.tpu.TPUConfig instead.
+
+I1021 13:26:31.330226 140460751279872 discovery.py:271] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I1021 13:26:31.370722 140460751279872 discovery.py:867] URL being requested: GET https://tpu.googleapis.com/v1/projects/arabert/locations/europe-west4-a/nodes/arabert-mobilebert?alt=json
+I1021 13:26:31.370965 140460751279872 transport.py:157] Attempting refresh to obtain initial access_token
+I1021 13:26:31.446773 140460751279872 discovery.py:271] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I1021 13:26:31.487711 140460751279872 discovery.py:867] URL being requested: GET https://tpu.googleapis.com/v1/projects/arabert/locations/europe-west4-a/nodes/arabert-mobilebert?alt=json
+I1021 13:26:31.487961 140460751279872 transport.py:157] Attempting refresh to obtain initial access_token
+INFO:tensorflow:*** Input Files ***
+I1021 13:26:31.597142 140460751279872 run_pretraining.py:941] *** Input Files ***
+INFO:tensorflow:  gs://arabert-mobilebert/books/tf_examples.tfrecord
+I1021 13:26:31.597385 140460751279872 run_pretraining.py:943]   gs://arabert-mobilebert/books/tf_examples.tfrecord
+INFO:tensorflow:  gs://arabert-mobilebert/news/tf_examples.tfrecord00
+I1021 13:26:31.597457 140460751279872 run_pretraining.py:943]   gs://arabert-mobilebert/news/tf_examples.tfrecord00
+INFO:tensorflow:  gs://arabert-mobilebert/news/tf_examples.tfrecord01
+I1021 13:26:31.597517 140460751279872 run_pretraining.py:943]   gs://arabert-mobilebert/news/tf_examples.tfrecord01
+INFO:tensorflow:  gs://arabert-mobilebert/news/tf_examples.tfrecord02
+I1021 13:26:31.597574 140460751279872 run_pretraining.py:943]   gs://arabert-mobilebert/news/tf_examples.tfrecord02
+INFO:tensorflow:  gs://arabert-mobilebert/news/tf_examples.tfrecord03
+I1021 13:26:31.597659 140460751279872 run_pretraining.py:943]   gs://arabert-mobilebert/news/tf_examples.tfrecord03
+INFO:tensorflow:  gs://arabert-mobilebert/twitter/tf_examples.tfrecord
+I1021 13:26:31.597717 140460751279872 run_pretraining.py:943]   gs://arabert-mobilebert/twitter/tf_examples.tfrecord
+INFO:tensorflow:  gs://arabert-mobilebert/wiki/tf_examples.tfrecord00
+I1021 13:26:31.597778 140460751279872 run_pretraining.py:943]   gs://arabert-mobilebert/wiki/tf_examples.tfrecord00
+INFO:tensorflow:  gs://arabert-mobilebert/wiki/tf_examples.tfrecord01
+I1021 13:26:31.597836 140460751279872 run_pretraining.py:943]   gs://arabert-mobilebert/wiki/tf_examples.tfrecord01
+WARNING:tensorflow:From run_pretraining.py:947: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+W1021 13:26:31.598001 140460751279872 module_wrapper.py:139] From run_pretraining.py:947: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+WARNING:tensorflow:Estimator's model_fn (<function model_fn_builder.<locals>.model_fn at 0x7fbf359026a8>) includes params argument, but params are not passed to Estimator.
+W1021 13:26:31.598326 140460751279872 estimator.py:1994] Estimator's model_fn (<function model_fn_builder.<locals>.model_fn at 0x7fbf359026a8>) includes params argument, but params are not passed to Estimator.
+INFO:tensorflow:Using config: {'_save_summary_steps': 100, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': None, '_device_fn': None, '_train_distribute': None, '_tpu_config': TPUConfig(iterations_per_loop=500, num_shards=None, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None, eval_training_input_configuration=2, experimental_host_call_every_n_steps=1), '_is_chief': True, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fbf35905b70>, '_eval_distribute': None, '_session_config': allow_soft_placement: true
+cluster_def {
+  job {
+    name: "worker"
+    tasks {
+      key: 0
+      value: "10.240.1.2:8470"
+    }
+  }
+}
+isolate_session_state: true
+, '_protocol': None, '_service': None, '_task_type': 'worker', '_experimental_max_worker_delay_secs': None, '_experimental_distribute': None, '_save_checkpoints_steps': 1000, '_num_ps_replicas': 0, '_evaluation_master': 'grpc://10.240.1.2:8470', '_global_id_in_cluster': 0, '_task_id': 0, '_num_worker_replicas': 1, '_cluster': <tensorflow.python.distribute.cluster_resolver.tpu_cluster_resolver.TPUClusterResolver object at 0x7fbf3595c0f0>, '_master': 'grpc://10.240.1.2:8470', '_save_checkpoints_secs': None, '_keep_checkpoint_max': 0, '_tf_random_seed': None, '_model_dir': 'gs://arabert-mobilebert/ibert-ckpt', '_session_creation_timeout_secs': 7200}
+I1021 13:26:31.599518 140460751279872 estimator.py:212] Using config: {'_save_summary_steps': 100, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': None, '_device_fn': None, '_train_distribute': None, '_tpu_config': TPUConfig(iterations_per_loop=500, num_shards=None, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None, eval_training_input_configuration=2, experimental_host_call_every_n_steps=1), '_is_chief': True, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fbf35905b70>, '_eval_distribute': None, '_session_config': allow_soft_placement: true
+cluster_def {
+  job {
+    name: "worker"
+    tasks {
+      key: 0
+      value: "10.240.1.2:8470"
+    }
+  }
+}
+isolate_session_state: true
+, '_protocol': None, '_service': None, '_task_type': 'worker', '_experimental_max_worker_delay_secs': None, '_experimental_distribute': None, '_save_checkpoints_steps': 1000, '_num_ps_replicas': 0, '_evaluation_master': 'grpc://10.240.1.2:8470', '_global_id_in_cluster': 0, '_task_id': 0, '_num_worker_replicas': 1, '_cluster': <tensorflow.python.distribute.cluster_resolver.tpu_cluster_resolver.TPUClusterResolver object at 0x7fbf3595c0f0>, '_master': 'grpc://10.240.1.2:8470', '_save_checkpoints_secs': None, '_keep_checkpoint_max': 0, '_tf_random_seed': None, '_model_dir': 'gs://arabert-mobilebert/ibert-ckpt', '_session_creation_timeout_secs': 7200}
+INFO:tensorflow:_TPUContext: eval_on_tpu True
+I1021 13:26:31.599778 140460751279872 tpu_context.py:220] _TPUContext: eval_on_tpu True
+INFO:tensorflow:***** Running training *****
+I1021 13:26:31.600488 140460751279872 run_pretraining.py:955] ***** Running training *****
+INFO:tensorflow:  Batch size = 128
+I1021 13:26:31.600612 140460751279872 run_pretraining.py:956]   Batch size = 128
+INFO:tensorflow:Skipping training since max_steps has already saved.
+I1021 13:26:32.303028 140460751279872 estimator.py:363] Skipping training since max_steps has already saved.
+INFO:tensorflow:training_loop marked as finished
+I1021 13:26:32.303351 140460751279872 error_handling.py:101] training_loop marked as finished

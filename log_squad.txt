@@ -1,0 +1,1774 @@
+INFO:tensorflow:Start of main
+I1021 16:42:50.168570 140299127903680 run_squad.py:1299] Start of main
+WARNING:tensorflow:From run_squad.py:1322: The name tf.estimator.tpu.InputPipelineConfig is deprecated. Please use tf.compat.v1.estimator.tpu.InputPipelineConfig instead.
+
+W1021 16:42:50.533209 140299127903680 module_wrapper.py:139] From run_squad.py:1322: The name tf.estimator.tpu.InputPipelineConfig is deprecated. Please use tf.compat.v1.estimator.tpu.InputPipelineConfig instead.
+
+WARNING:tensorflow:From run_squad.py:1323: The name tf.estimator.tpu.RunConfig is deprecated. Please use tf.compat.v1.estimator.tpu.RunConfig instead.
+
+W1021 16:42:50.533484 140299127903680 module_wrapper.py:139] From run_squad.py:1323: The name tf.estimator.tpu.RunConfig is deprecated. Please use tf.compat.v1.estimator.tpu.RunConfig instead.
+
+WARNING:tensorflow:From run_squad.py:1328: The name tf.estimator.tpu.TPUConfig is deprecated. Please use tf.compat.v1.estimator.tpu.TPUConfig instead.
+
+W1021 16:42:50.533643 140299127903680 module_wrapper.py:139] From run_squad.py:1328: The name tf.estimator.tpu.TPUConfig is deprecated. Please use tf.compat.v1.estimator.tpu.TPUConfig instead.
+
+I1021 16:42:50.536956 140299127903680 discovery.py:271] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I1021 16:42:50.577430 140299127903680 discovery.py:867] URL being requested: GET https://tpu.googleapis.com/v1/projects/arabert/locations/europe-west4-a/nodes/arabert-mobilebert?alt=json
+I1021 16:42:50.577667 140299127903680 transport.py:157] Attempting refresh to obtain initial access_token
+I1021 16:42:50.673429 140299127903680 discovery.py:271] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I1021 16:42:50.714018 140299127903680 discovery.py:867] URL being requested: GET https://tpu.googleapis.com/v1/projects/arabert/locations/europe-west4-a/nodes/arabert-mobilebert?alt=json
+I1021 16:42:50.714262 140299127903680 transport.py:157] Attempting refresh to obtain initial access_token
+INFO:tensorflow:reading squad
+I1021 16:42:50.803370 140299127903680 run_squad.py:1336] reading squad
+WARNING:tensorflow:Could not find answer: 'تناذر داون أو التثالث الصبغي 21 أو التثالث الصبغي' vs. 'تناذر داون أو التثالث الصبغي 21 أو التثالث الصبغي G'
+W1021 16:42:50.927160 140299127903680 run_squad.py:322] Could not find answer: 'تناذر داون أو التثالث الصبغي 21 أو التثالث الصبغي' vs. 'تناذر داون أو التثالث الصبغي 21 أو التثالث الصبغي G'
+INFO:tensorflow:finished reading squad
+I1021 16:42:50.935260 140299127903680 run_squad.py:1346] finished reading squad
+INFO:tensorflow:Building started
+I1021 16:42:50.935444 140299127903680 run_squad.py:1351] Building started
+INFO:tensorflow:Building finished
+I1021 16:42:50.935560 140299127903680 run_squad.py:1361] Building finished
+WARNING:tensorflow:From run_squad.py:1364: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+W1021 16:42:50.935760 140299127903680 module_wrapper.py:139] From run_squad.py:1364: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+WARNING:tensorflow:Estimator's model_fn (<function model_fn at 0x7f99861cd050>) includes params argument, but params are not passed to Estimator.
+W1021 16:42:50.936007 140299127903680 estimator.py:1994] Estimator's model_fn (<function model_fn at 0x7f99861cd050>) includes params argument, but params are not passed to Estimator.
+INFO:tensorflow:Using config: {'_save_checkpoints_secs': None, '_session_config': allow_soft_placement: true
+cluster_def {
+  job {
+    name: "worker"
+    tasks {
+      key: 0
+      value: "10.240.1.2:8470"
+    }
+  }
+}
+isolate_session_state: true
+, '_keep_checkpoint_max': 5, '_task_type': 'worker', '_train_distribute': None, '_is_chief': True, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f9987e55090>, '_model_dir': 'gs://arabert-mobilebert/squad-ibert/', '_protocol': None, '_save_checkpoints_steps': 1000, '_keep_checkpoint_every_n_hours': 10000, '_service': None, '_num_ps_replicas': 0, '_tpu_config': TPUConfig(iterations_per_loop=1000, num_shards=None, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None, eval_training_input_configuration=2, experimental_host_call_every_n_steps=1), '_tf_random_seed': None, '_save_summary_steps': 100, '_device_fn': None, '_session_creation_timeout_secs': 7200, '_cluster': <tensorflow.python.distribute.cluster_resolver.tpu_cluster_resolver.TPUClusterResolver object at 0x7f9987e60550>, '_experimental_distribute': None, '_num_worker_replicas': 1, '_task_id': 0, '_log_step_count_steps': None, '_experimental_max_worker_delay_secs': None, '_evaluation_master': u'grpc://10.240.1.2:8470', '_eval_distribute': None, '_global_id_in_cluster': 0, '_master': u'grpc://10.240.1.2:8470'}
+I1021 16:42:50.937073 140299127903680 estimator.py:212] Using config: {'_save_checkpoints_secs': None, '_session_config': allow_soft_placement: true
+cluster_def {
+  job {
+    name: "worker"
+    tasks {
+      key: 0
+      value: "10.240.1.2:8470"
+    }
+  }
+}
+isolate_session_state: true
+, '_keep_checkpoint_max': 5, '_task_type': 'worker', '_train_distribute': None, '_is_chief': True, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f9987e55090>, '_model_dir': 'gs://arabert-mobilebert/squad-ibert/', '_protocol': None, '_save_checkpoints_steps': 1000, '_keep_checkpoint_every_n_hours': 10000, '_service': None, '_num_ps_replicas': 0, '_tpu_config': TPUConfig(iterations_per_loop=1000, num_shards=None, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None, eval_training_input_configuration=2, experimental_host_call_every_n_steps=1), '_tf_random_seed': None, '_save_summary_steps': 100, '_device_fn': None, '_session_creation_timeout_secs': 7200, '_cluster': <tensorflow.python.distribute.cluster_resolver.tpu_cluster_resolver.TPUClusterResolver object at 0x7f9987e60550>, '_experimental_distribute': None, '_num_worker_replicas': 1, '_task_id': 0, '_log_step_count_steps': None, '_experimental_max_worker_delay_secs': None, '_evaluation_master': u'grpc://10.240.1.2:8470', '_eval_distribute': None, '_global_id_in_cluster': 0, '_master': u'grpc://10.240.1.2:8470'}
+INFO:tensorflow:_TPUContext: eval_on_tpu True
+I1021 16:42:50.937352 140299127903680 tpu_context.py:220] _TPUContext: eval_on_tpu True
+INFO:tensorflow:Maybe start training
+I1021 16:42:50.937793 140299127903680 run_squad.py:1371] Maybe start training
+INFO:tensorflow:Skipping training since max_steps has already saved.
+I1021 16:42:51.655411 140299127903680 estimator.py:363] Skipping training since max_steps has already saved.
+INFO:tensorflow:training_loop marked as finished
+I1021 16:42:51.655723 140299127903680 error_handling.py:101] training_loop marked as finished
+INFO:tensorflow:Size of examples is 702
+I1021 16:42:51.793327 140299127903680 run_squad.py:351] Size of examples is 702
+INFO:tensorflow:*** Example ***
+I1021 16:42:51.796154 140299127903680 run_squad.py:468] *** Example ***
+INFO:tensorflow:unique_id: 1000000000
+I1021 16:42:51.796370 140299127903680 run_squad.py:469] unique_id: 1000000000
+INFO:tensorflow:example_index: 0
+I1021 16:42:51.796502 140299127903680 run_squad.py:470] example_index: 0
+INFO:tensorflow:doc_span_index: 0
+I1021 16:42:51.796608 140299127903680 run_squad.py:471] doc_span_index: 0
+INFO:tensorflow:tokens: [CLS] من هو حمزة بن عبد المطلب ؟ [SEP] حمزة بن عبد المطلب الهاشمي القرشي صح ##ابي من صح ##ابة رسول الاسلام محمد ، وعم ##ه واخ ##وه من الرضاعة واحد وز ##راي ##ه الاربعة عشر ، وهو خير اع ##مام ##ه لقوله : [UNK] خير اخ ##وتي علي ، وخير اع ##مام ##ي حمزة رضي الله عنهما [UNK] . [SEP]
+I1021 16:42:51.796832 140299127903680 run_squad.py:474] tokens: [CLS] من هو حمزة بن عبد المطلب ؟ [SEP] حمزة بن عبد المطلب الهاشمي القرشي صح ##ابي من صح ##ابة رسول الاسلام محمد ، وعم ##ه واخ ##وه من الرضاعة واحد وز ##راي ##ه الاربعة عشر ، وهو خير اع ##مام ##ه لقوله : [UNK] خير اخ ##وتي علي ، وخير اع ##مام ##ي حمزة رضي الله عنهما [UNK] . [SEP]
+INFO:tensorflow:token_to_orig_map: 9:0 10:1 11:2 12:3 13:4 14:5 15:6 16:6 17:7 18:8 19:8 20:9 21:10 22:11 23:11 24:12 25:12 26:13 27:13 28:14 29:15 30:16 31:17 32:17 33:17 34:18 35:19 36:19 37:20 38:21 39:22 40:22 41:22 42:23 43:23 44:24 45:24 46:25 47:25 48:26 49:26 50:27 51:28 52:28 53:28 54:29 55:30 56:31 57:32 58:32 59:32
+I1021 16:42:51.797029 140299127903680 run_squad.py:476] token_to_orig_map: 9:0 10:1 11:2 12:3 13:4 14:5 15:6 16:6 17:7 18:8 19:8 20:9 21:10 22:11 23:11 24:12 25:12 26:13 27:13 28:14 29:15 30:16 31:17 32:17 33:17 34:18 35:19 36:19 37:20 38:21 39:22 40:22 41:22 42:23 43:23 44:24 45:24 46:25 47:25 48:26 49:26 50:27 51:28 52:28 53:28 54:29 55:30 56:31 57:32 58:32 59:32
+INFO:tensorflow:token_is_max_context: 9:True 10:True 11:True 12:True 13:True 14:True 15:True 16:True 17:True 18:True 19:True 20:True 21:True 22:True 23:True 24:True 25:True 26:True 27:True 28:True 29:True 30:True 31:True 32:True 33:True 34:True 35:True 36:True 37:True 38:True 39:True 40:True 41:True 42:True 43:True 44:True 45:True 46:True 47:True 48:True 49:True 50:True 51:True 52:True 53:True 54:True 55:True 56:True 57:True 58:True 59:True
+I1021 16:42:51.797174 140299127903680 run_squad.py:478] token_is_max_context: 9:True 10:True 11:True 12:True 13:True 14:True 15:True 16:True 17:True 18:True 19:True 20:True 21:True 22:True 23:True 24:True 25:True 26:True 27:True 28:True 29:True 30:True 31:True 32:True 33:True 34:True 35:True 36:True 37:True 38:True 39:True 40:True 41:True 42:True 43:True 44:True 45:True 46:True 47:True 48:True 49:True 50:True 51:True 52:True 53:True 54:True 55:True 56:True 57:True 58:True 59:True
+INFO:tensorflow:input_ids: 2 179 383 9646 267 324 13388 55 3 9646 267 324 13388 16337 18019 1151 1808 179 1151 596 1932 2197 417 53 5942 98 8602 994 179 29638 1084 451 14324 98 15834 1139 53 545 2748 1820 6639 98 16998 26 1 2748 1441 5692 287 53 21253 1820 6639 109 9646 3089 333 9826 1 14 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1021 16:42:51.797369 140299127903680 run_squad.py:479] input_ids: 2 179 383 9646 267 324 13388 55 3 9646 267 324 13388 16337 18019 1151 1808 179 1151 596 1932 2197 417 53 5942 98 8602 994 179 29638 1084 451 14324 98 15834 1139 53 545 2748 1820 6639 98 16998 26 1 2748 1441 5692 287 53 21253 1820 6639 109 9646 3089 333 9826 1 14 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1021 16:42:51.797512 140299127903680 run_squad.py:481] input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+I1021 16:42:51.797647 140299127903680 run_squad.py:483] segment_ids: 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+INFO:tensorflow:***** Running predictions *****
+I1021 16:42:54.961703 140299127903680 run_squad.py:1429] ***** Running predictions *****
+INFO:tensorflow:  Num orig examples = 702
+I1021 16:42:54.962140 140299127903680 run_squad.py:1430]   Num orig examples = 702
+INFO:tensorflow:  Num split examples = 717
+I1021 16:42:54.962940 140299127903680 run_squad.py:1431]   Num split examples = 717
+INFO:tensorflow:  Batch size = 8
+I1021 16:42:54.963088 140299127903680 run_squad.py:1432]   Batch size = 8
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+W1021 16:42:55.144112 140299127903680 deprecation.py:506] From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling __init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+INFO:tensorflow:Querying Tensorflow master (grpc://10.240.1.2:8470) for TPU system metadata.
+I1021 16:42:55.145045 140299127903680 tpu_system_metadata.py:78] Querying Tensorflow master (grpc://10.240.1.2:8470) for TPU system metadata.
+2020-10-21 16:42:55.146354: W tensorflow/core/distributed_runtime/rpc/grpc_session.cc:370] GrpcSession::ListDevices will initialize the session with an empty graph and other defaults because the session has not yet been created.
+INFO:tensorflow:Found TPU system:
+I1021 16:42:55.156784 140299127903680 tpu_system_metadata.py:148] Found TPU system:
+INFO:tensorflow:*** Num TPU Cores: 8
+I1021 16:42:55.157001 140299127903680 tpu_system_metadata.py:149] *** Num TPU Cores: 8
+INFO:tensorflow:*** Num TPU Workers: 1
+I1021 16:42:55.157171 140299127903680 tpu_system_metadata.py:150] *** Num TPU Workers: 1
+INFO:tensorflow:*** Num TPU Cores Per Worker: 8
+I1021 16:42:55.157309 140299127903680 tpu_system_metadata.py:152] *** Num TPU Cores Per Worker: 8
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, -1, 2201066121769372091)
+I1021 16:42:55.157430 140299127903680 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, -1, 2201066121769372091)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 17179869184, 1134196219350505954)
+I1021 16:42:55.158162 140299127903680 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 17179869184, 1134196219350505954)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 17179869184, 16574470516942878686)
+I1021 16:42:55.158314 140299127903680 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 17179869184, 16574470516942878686)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 17179869184, 11252742978977280257)
+I1021 16:42:55.158437 140299127903680 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 17179869184, 11252742978977280257)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 17179869184, 5754488924657590493)
+I1021 16:42:55.158551 140299127903680 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 17179869184, 5754488924657590493)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 17179869184, 4976765316038844555)
+I1021 16:42:55.158664 140299127903680 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 17179869184, 4976765316038844555)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 17179869184, 7629849641470032019)
+I1021 16:42:55.158821 140299127903680 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 17179869184, 7629849641470032019)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 17179869184, 14510203963845092372)
+I1021 16:42:55.158940 140299127903680 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 17179869184, 14510203963845092372)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 17179869184, 8981013810975647551)
+I1021 16:42:55.159066 140299127903680 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 17179869184, 8981013810975647551)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 14817737962855972199)
+I1021 16:42:55.159229 140299127903680 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 17179869184, 14817737962855972199)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 17179869184, 14345237744563864817)
+I1021 16:42:55.159341 140299127903680 tpu_system_metadata.py:154] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 17179869184, 14345237744563864817)
+INFO:tensorflow:Calling model_fn.
+I1021 16:42:55.161214 140299127903680 estimator.py:1148] Calling model_fn.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_estimator/python/estimator/api/_v1/estimator/__init__.py:12: The name tf.estimator.inputs is deprecated. Please use tf.compat.v1.estimator.inputs instead.
+
+W1021 16:42:55.191028 140299127903680 module_wrapper.py:139] From /usr/local/lib/python2.7/dist-packages/tensorflow_estimator/python/estimator/api/_v1/estimator/__init__.py:12: The name tf.estimator.inputs is deprecated. Please use tf.compat.v1.estimator.inputs instead.
+
+WARNING:tensorflow:From run_squad.py:782: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W1021 16:42:55.366626 140299127903680 deprecation.py:323] From run_squad.py:782: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-10-21 16:42:56.554828: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2020-10-21 16:42:56.554891: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2020-10-21 16:42:56.554925: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (arabert-mobilebert): /proc/driver/nvidia/version does not exist
+INFO:tensorflow:*** Features ***
+I1021 16:42:56.567893 140299127903680 run_squad.py:658] *** Features ***
+INFO:tensorflow:  name = input_ids, shape = (1, 384)
+I1021 16:42:56.568227 140299127903680 run_squad.py:660]   name = input_ids, shape = (1, 384)
+INFO:tensorflow:  name = input_mask, shape = (1, 384)
+I1021 16:42:56.568409 140299127903680 run_squad.py:660]   name = input_mask, shape = (1, 384)
+INFO:tensorflow:  name = segment_ids, shape = (1, 384)
+I1021 16:42:56.568551 140299127903680 run_squad.py:660]   name = segment_ids, shape = (1, 384)
+INFO:tensorflow:  name = unique_ids, shape = (1,)
+I1021 16:42:56.568669 140299127903680 run_squad.py:660]   name = unique_ids, shape = (1,)
+INFO:tensorflow:**** Trainable Variables ****
+I1021 16:43:03.116779 140299127903680 run_squad.py:701] **** Trainable Variables ****
+INFO:tensorflow:  name = bert/embeddings/word_embeddings:0, shape = (30000, 128)
+I1021 16:43:03.117100 140299127903680 run_squad.py:707]   name = bert/embeddings/word_embeddings:0, shape = (30000, 128)
+INFO:tensorflow:  name = bert/embeddings/embedding_transformation/kernel:0, shape = (384, 512)
+I1021 16:43:03.117320 140299127903680 run_squad.py:707]   name = bert/embeddings/embedding_transformation/kernel:0, shape = (384, 512)
+INFO:tensorflow:  name = bert/embeddings/embedding_transformation/bias:0, shape = (512,)
+I1021 16:43:03.117494 140299127903680 run_squad.py:707]   name = bert/embeddings/embedding_transformation/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/embeddings/token_type_embeddings:0, shape = (2, 512)
+I1021 16:43:03.117630 140299127903680 run_squad.py:707]   name = bert/embeddings/token_type_embeddings:0, shape = (2, 512)
+INFO:tensorflow:  name = bert/embeddings/position_embeddings:0, shape = (512, 512)
+I1021 16:43:03.117777 140299127903680 run_squad.py:707]   name = bert/embeddings/position_embeddings:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.117907 140299127903680 run_squad.py:707]   name = bert/embeddings/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/embeddings/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.118046 140299127903680 run_squad.py:707]   name = bert/embeddings/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.118165 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.118289 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.118403 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.118530 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.118664 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.118809 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.118935 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.119076 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.119239 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.119373 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.119491 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.119623 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.119752 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.119893 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.120023 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_0/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.120153 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.120299 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.120428 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.120549 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.120667 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.120779 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.120904 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.121038 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_0/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.121155 140299127903680 run_squad.py:707]   name = bert/encoder/layer_0/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.121280 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.121426 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.121548 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.121665 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.121793 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.121916 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.122035 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.122163 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.122271 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.122385 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.122510 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.122637 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.122745 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.122860 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.122971 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_1/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.123128 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.123265 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.123392 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.123507 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.123640 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.123754 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.123884 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.124033 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_1/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.124174 140299127903680 run_squad.py:707]   name = bert/encoder/layer_1/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.124303 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.124434 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.124553 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.124680 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.124819 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.124958 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.125087 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.125236 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.125350 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.125473 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.125588 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.125709 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.125821 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.125931 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.126070 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_2/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.126190 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.126311 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.126435 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.126550 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.126663 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.126781 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.126908 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.127043 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_2/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.127199 140299127903680 run_squad.py:707]   name = bert/encoder/layer_2/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.127324 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.127459 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.127593 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.127763 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.127892 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.128031 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.128153 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.128278 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.128396 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.128525 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.128689 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.128824 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.128948 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.129082 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.129200 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_3/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.129328 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.129455 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.129584 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.129702 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.129827 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.129944 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.130095 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.130232 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_3/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.130369 140299127903680 run_squad.py:707]   name = bert/encoder/layer_3/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.130496 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.130625 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.130739 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.130852 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.130973 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.131159 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.131300 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.131433 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.131551 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.131678 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.131799 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.131926 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.132054 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.132169 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.132293 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_4/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.132424 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.132540 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.132673 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.132791 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.132903 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.133044 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.133171 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.133287 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_4/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.133400 140299127903680 run_squad.py:707]   name = bert/encoder/layer_4/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.133514 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.133651 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.133770 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.133891 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.134031 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.134166 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.134285 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.134414 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.134536 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.134666 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.134799 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.134951 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.135092 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.135231 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.135308 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_5/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.135385 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.135452 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.135528 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.135596 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.135665 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.135731 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.135835 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.135951 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_5/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.136079 140299127903680 run_squad.py:707]   name = bert/encoder/layer_5/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.136187 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.136307 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.136415 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.136522 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.136617 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.136693 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.136760 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.136833 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.136900 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.136976 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.137052 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.137147 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.137217 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.137283 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.137348 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_6/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.137422 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.137487 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.137566 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.137633 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.137697 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.137794 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.137900 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.137970 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_6/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.138046 140299127903680 run_squad.py:707]   name = bert/encoder/layer_6/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.138112 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.138185 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.138252 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.138318 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.138385 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.138457 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.138523 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.138609 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.138689 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.138829 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.138936 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.139065 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.139197 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.139302 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.139408 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_7/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.139522 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.139601 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.139677 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.139745 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.139813 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.139879 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.139952 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.140027 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_7/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.140094 140299127903680 run_squad.py:707]   name = bert/encoder/layer_7/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.140161 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.140233 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.140300 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.140366 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.140433 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.140558 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.140664 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.140746 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.140814 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.140923 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.141015 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.141092 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.141159 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.141226 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.141292 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_8/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.141366 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.141468 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.141572 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.141676 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.141782 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.141886 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.142008 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.142117 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_8/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.142230 140299127903680 run_squad.py:707]   name = bert/encoder/layer_8/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.142311 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.142385 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.142452 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.142523 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.142635 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.142771 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.142879 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.143011 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.143148 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.143289 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.143398 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.143532 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.143646 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.143757 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.143858 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_9/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.143939 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.144016 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.144099 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.144170 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.144247 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.144352 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.144439 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.144505 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_9/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.144613 140299127903680 run_squad.py:707]   name = bert/encoder/layer_9/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.144731 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.144834 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.144936 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.145045 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.145144 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.145250 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.145318 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.145389 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.145472 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.145544 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.145611 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.145689 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.145757 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.145823 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.145889 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_10/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.145961 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.146051 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.146158 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.146240 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.146305 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.146370 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.146440 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.146503 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_10/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.146569 140299127903680 run_squad.py:707]   name = bert/encoder/layer_10/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.146631 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.146702 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.146765 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.146828 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.146927 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.147054 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.147185 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.147298 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.147397 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.147507 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.147608 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.147706 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.147773 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.147838 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.147901 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_11/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.147972 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.148045 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.148116 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.148180 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.148243 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.148307 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.148375 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.148439 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_11/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.148524 140299127903680 run_squad.py:707]   name = bert/encoder/layer_11/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.148649 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.148729 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.148797 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.148861 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.148927 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.149005 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.149075 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.149172 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.149291 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.149413 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.149529 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.149652 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.149765 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.149877 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.149988 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_12/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.150126 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.150243 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.150382 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.150501 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.150623 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.150738 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.150866 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.150990 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_12/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.151166 140299127903680 run_squad.py:707]   name = bert/encoder/layer_12/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.151309 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.151447 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.151566 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.151683 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.151801 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.151940 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.152075 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.152204 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.152328 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.152455 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.152570 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.152703 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.152816 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.152928 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.153049 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_13/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.153182 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.153297 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.153430 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.153549 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.153669 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.153784 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.153909 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.154042 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_13/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.154181 140299127903680 run_squad.py:707]   name = bert/encoder/layer_13/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.154313 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.154443 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.154563 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.154680 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.154793 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.154930 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.155062 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.155219 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.155337 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.155461 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.155576 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.155698 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.155810 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.155926 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.156239 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_14/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.156430 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.156594 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.156739 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.156881 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.157002 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.157130 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.157284 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.157428 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_14/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.157578 140299127903680 run_squad.py:707]   name = bert/encoder/layer_14/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.157701 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.157830 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.157949 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.158081 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.158206 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.158334 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.158449 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.158607 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.158742 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.158871 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.158999 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.159162 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.159288 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.159410 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.159538 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_15/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.159674 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.159795 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.159934 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.160057 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.160175 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.160295 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.160454 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.160604 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_15/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.160739 140299127903680 run_squad.py:707]   name = bert/encoder/layer_15/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.160855 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.160989 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.161109 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.161231 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.161346 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.161484 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.161616 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.161742 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.161880 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.162014 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.162128 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.162260 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.162373 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.162497 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.162614 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_16/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.162760 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.162883 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.163022 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.163173 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.163295 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.163408 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.163557 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.163696 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_16/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.163825 140299127903680 run_squad.py:707]   name = bert/encoder/layer_16/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.163938 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.164062 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.164175 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.164288 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.164397 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.164541 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.164671 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.164797 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.164910 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.165033 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.165148 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.165272 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.165386 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.165508 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.165621 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_17/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.165752 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.165894 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.166024 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.166143 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.166270 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.166380 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.166557 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.166695 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_17/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.166835 140299127903680 run_squad.py:707]   name = bert/encoder/layer_17/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.166948 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.167071 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.167212 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.167323 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.167431 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.167582 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.167709 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.167838 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.167957 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.168277 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.168417 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.168591 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.168740 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.168859 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.168977 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_18/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.169122 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.169249 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.169375 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.169491 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.169615 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.169755 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.169903 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.170032 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_18/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.170155 140299127903680 run_squad.py:707]   name = bert/encoder/layer_18/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.170289 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.170425 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.170551 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.170669 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.170787 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.170927 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.171058 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.171221 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.171335 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.171454 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.171596 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.171720 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.171853 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.171972 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.172105 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_19/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.172234 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.172352 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.172482 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.172604 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.172722 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.172837 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.172962 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.173104 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_19/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.173243 140299127903680 run_squad.py:707]   name = bert/encoder/layer_19/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.173377 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.173510 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.173626 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.173741 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.173861 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.173984 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.174108 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.174241 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.174357 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.174482 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.174607 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.174729 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.174843 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.174959 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.175082 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_20/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.175247 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.175369 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.175496 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.175617 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.175733 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.175847 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.175972 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.176130 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_20/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.176287 140299127903680 run_squad.py:707]   name = bert/encoder/layer_20/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.176414 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.176546 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.176665 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.176789 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.176901 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.177032 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.177146 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.177280 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.177402 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.177535 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.177644 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.177784 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.177897 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.178023 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.178158 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_21/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.178292 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.178419 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.178559 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.178698 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.178845 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.178980 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.179147 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.179277 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_21/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.179392 140299127903680 run_squad.py:707]   name = bert/encoder/layer_21/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.179502 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.179636 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.179757 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.179886 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.180027 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.180166 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.180284 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.180408 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.180545 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.180675 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.180815 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.180938 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.181061 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.181170 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.181286 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_22/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.181411 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.181524 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.181648 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.181759 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.181869 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.181978 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.182110 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.182228 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_22/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.182341 140299127903680 run_squad.py:707]   name = bert/encoder/layer_22/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/bottleneck/input/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.182456 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/bottleneck/input/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/bottleneck/input/dense/bias:0, shape = (512,)
+I1021 16:43:03.182588 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/bottleneck/input/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.182702 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/bottleneck/input/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.182813 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/bottleneck/input/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/self/query/kernel:0, shape = (512, 512)
+I1021 16:43:03.182934 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/attention/self/query/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/self/query/bias:0, shape = (512,)
+I1021 16:43:03.183068 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/attention/self/query/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/self/key/kernel:0, shape = (512, 512)
+I1021 16:43:03.183265 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/attention/self/key/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/self/key/bias:0, shape = (512,)
+I1021 16:43:03.183418 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/attention/self/key/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/self/value/kernel:0, shape = (512, 512)
+I1021 16:43:03.183542 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/attention/self/value/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/self/value/bias:0, shape = (512,)
+I1021 16:43:03.183669 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/attention/self/value/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/output/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.183784 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/attention/output/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.183913 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/attention/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.184041 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/attention/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/attention/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.184155 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/attention/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/intermediate/dense/kernel:0, shape = (512, 4096)
+I1021 16:43:03.184267 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/intermediate/dense/kernel:0, shape = (512, 4096)
+INFO:tensorflow:  name = bert/encoder/layer_23/intermediate/dense/bias:0, shape = (4096,)
+I1021 16:43:03.184386 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/intermediate/dense/bias:0, shape = (4096,)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/dense/kernel:0, shape = (4096, 512)
+I1021 16:43:03.184494 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/output/dense/kernel:0, shape = (4096, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/dense/bias:0, shape = (512,)
+I1021 16:43:03.184613 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/output/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.184755 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/output/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.184870 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/output/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/bottleneck/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.185008 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/output/bottleneck/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/bottleneck/dense/bias:0, shape = (512,)
+I1021 16:43:03.185147 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/output/bottleneck/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+I1021 16:43:03.185275 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/output/bottleneck/LayerNorm/beta:0, shape = (512,)
+INFO:tensorflow:  name = bert/encoder/layer_23/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+I1021 16:43:03.185396 140299127903680 run_squad.py:707]   name = bert/encoder/layer_23/output/bottleneck/LayerNorm/gamma:0, shape = (512,)
+INFO:tensorflow:  name = bert/pooler/dense/kernel:0, shape = (512, 512)
+I1021 16:43:03.185517 140299127903680 run_squad.py:707]   name = bert/pooler/dense/kernel:0, shape = (512, 512)
+INFO:tensorflow:  name = bert/pooler/dense/bias:0, shape = (512,)
+I1021 16:43:03.185650 140299127903680 run_squad.py:707]   name = bert/pooler/dense/bias:0, shape = (512,)
+INFO:tensorflow:  name = cls/squad/output_weights:0, shape = (2, 512)
+I1021 16:43:03.185775 140299127903680 run_squad.py:707]   name = cls/squad/output_weights:0, shape = (2, 512)
+INFO:tensorflow:  name = cls/squad/output_bias:0, shape = (2,)
+I1021 16:43:03.185930 140299127903680 run_squad.py:707]   name = cls/squad/output_bias:0, shape = (2,)
+WARNING:tensorflow:From run_squad.py:748: The name tf.estimator.tpu.TPUEstimatorSpec is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimatorSpec instead.
+
+W1021 16:43:03.186217 140299127903680 module_wrapper.py:139] From run_squad.py:748: The name tf.estimator.tpu.TPUEstimatorSpec is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimatorSpec instead.
+
+INFO:tensorflow:Done calling model_fn.
+I1021 16:43:04.550733 140299127903680 estimator.py:1150] Done calling model_fn.
+INFO:tensorflow:TPU job name worker
+I1021 16:43:04.555722 140299127903680 tpu_estimator.py:506] TPU job name worker
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/array_ops.py:1475: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W1021 16:43:04.848028 140299127903680 deprecation.py:323] From /usr/local/lib/python2.7/dist-packages/tensorflow_core/python/ops/array_ops.py:1475: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+INFO:tensorflow:Graph was finalized.
+I1021 16:43:06.044964 140299127903680 monitored_session.py:240] Graph was finalized.
+INFO:tensorflow:Restoring parameters from gs://arabert-mobilebert/squad-ibert/model.ckpt-57
+I1021 16:43:06.087867 140299127903680 saver.py:1284] Restoring parameters from gs://arabert-mobilebert/squad-ibert/model.ckpt-57
+INFO:tensorflow:Running local_init_op.
+I1021 16:43:09.440473 140299127903680 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I1021 16:43:09.915091 140299127903680 session_manager.py:502] Done running local_init_op.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:818: load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Prefer Variable.assign which has equivalent behavior in 2.X.
+W1021 16:43:10.591808 140299127903680 deprecation.py:323] From /usr/local/lib/python2.7/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py:818: load (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Prefer Variable.assign which has equivalent behavior in 2.X.
+INFO:tensorflow:Init TPU system
+I1021 16:43:11.028574 140299127903680 tpu_estimator.py:567] Init TPU system
+INFO:tensorflow:Initialized TPU in 10 seconds
+I1021 16:43:21.863163 140299127903680 tpu_estimator.py:576] Initialized TPU in 10 seconds
+INFO:tensorflow:Starting infeed thread controller.
+I1021 16:43:21.864025 140296985769728 tpu_estimator.py:521] Starting infeed thread controller.
+INFO:tensorflow:Starting outfeed thread controller.
+I1021 16:43:21.864542 140296977377024 tpu_estimator.py:540] Starting outfeed thread controller.
+INFO:tensorflow:Initialized dataset iterators in 0 seconds
+I1021 16:43:22.384716 140299127903680 util.py:98] Initialized dataset iterators in 0 seconds
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:22.823348 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:22.823997 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Outfeed finished for iteration (0, 0)
+I1021 16:43:22.825711 140296977377024 tpu_estimator.py:279] Outfeed finished for iteration (0, 0)
+INFO:tensorflow:Processing example: 0
+I1021 16:43:38.293864 140299127903680 run_squad.py:1455] Processing example: 0
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.297919 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.298163 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.307213 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.307383 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.316093 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.316246 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.322434 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.322583 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.329539 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.329693 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.336112 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.336302 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.342863 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.343044 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.350239 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.350435 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.356565 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.356745 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.363049 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.363226 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.369524 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.369661 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.376302 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.376441 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.385950 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.386096 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.391658 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.391834 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.397576 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.397752 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.403755 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.403930 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.410820 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.410985 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.416965 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.417100 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.422986 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.423201 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.429442 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.429624 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.435735 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.435908 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.441272 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.441425 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.447447 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.447582 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.453366 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.453525 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.459379 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.459568 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.466248 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.466422 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.472646 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.472791 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.477411 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.477545 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.484246 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.484385 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.490143 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.490291 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.496236 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.496386 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.504175 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.504328 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.512196 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.512343 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.519295 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.519465 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.525175 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.525329 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.531169 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.531316 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.537571 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.537761 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.543452 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.543606 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.549082 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.549237 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.556152 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.556340 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.564178 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.564318 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.572264 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.572413 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.579179 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.579323 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.586186 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.586330 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.594036 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.594178 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.599360 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.599514 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.605654 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.605802 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.611469 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.611613 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.617693 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.617875 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.625574 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.625731 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.632961 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.633126 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.639338 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.639527 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.647568 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.647799 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.655901 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.656083 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.663630 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.663804 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.671530 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.671672 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.678812 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.678957 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.685476 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.685664 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.691633 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.691811 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.698872 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.699035 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.705514 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.705656 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.710958 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.711177 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.717344 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.717545 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.725274 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.725457 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.732687 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.732851 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.741537 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.741746 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.748711 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.748872 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.756303 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.756450 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.763456 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.763601 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.772826 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.772989 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.780004 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.780148 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.786029 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.786174 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.791728 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.791882 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.801450 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.801597 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.812908 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.813088 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.824115 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.824270 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.835798 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.835952 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.847388 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.847532 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.859014 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.859184 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.870640 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.870793 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.882350 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.882498 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.893503 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.893672 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.904791 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.904936 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.915507 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.915664 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.926629 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.926774 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.937414 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.937561 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.948381 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.948523 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.959867 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.960024 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.971743 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.971892 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Enqueue next (1) batch(es) of data to infeed.
+I1021 16:43:38.982686 140299127903680 tpu_estimator.py:600] Enqueue next (1) batch(es) of data to infeed.
+INFO:tensorflow:Dequeue next (1) batch(es) of data from outfeed.
+I1021 16:43:38.982848 140299127903680 tpu_estimator.py:604] Dequeue next (1) batch(es) of data from outfeed.
+INFO:tensorflow:Stop infeed thread controller
+I1021 16:43:38.991745 140299127903680 tpu_estimator.py:608] Stop infeed thread controller
+INFO:tensorflow:Shutting down InfeedController thread.
+I1021 16:43:38.991883 140299127903680 tpu_estimator.py:434] Shutting down InfeedController thread.
+INFO:tensorflow:InfeedController received shutdown signal, stopping.
+I1021 16:43:38.992078 140296985769728 tpu_estimator.py:429] InfeedController received shutdown signal, stopping.
+INFO:tensorflow:Infeed thread finished, shutting down.
+I1021 16:43:38.992288 140296985769728 tpu_estimator.py:537] Infeed thread finished, shutting down.
+INFO:tensorflow:infeed marked as finished
+I1021 16:43:38.992500 140299127903680 error_handling.py:101] infeed marked as finished
+INFO:tensorflow:Stop output thread controller
+I1021 16:43:38.992676 140299127903680 tpu_estimator.py:612] Stop output thread controller
+INFO:tensorflow:Shutting down OutfeedController thread.
+I1021 16:43:38.992791 140299127903680 tpu_estimator.py:434] Shutting down OutfeedController thread.
+INFO:tensorflow:OutfeedController received shutdown signal, stopping.
+I1021 16:43:38.992973 140296977377024 tpu_estimator.py:429] OutfeedController received shutdown signal, stopping.
+INFO:tensorflow:Outfeed thread finished, shutting down.
+I1021 16:43:38.993181 140296977377024 tpu_estimator.py:551] Outfeed thread finished, shutting down.
+INFO:tensorflow:outfeed marked as finished
+I1021 16:43:38.993355 140299127903680 error_handling.py:101] outfeed marked as finished
+INFO:tensorflow:Shutdown TPU system.
+I1021 16:43:38.993467 140299127903680 tpu_estimator.py:616] Shutdown TPU system.
+INFO:tensorflow:prediction_loop marked as finished
+I1021 16:43:41.047533 140299127903680 error_handling.py:101] prediction_loop marked as finished
+INFO:tensorflow:prediction_loop marked as finished
+I1021 16:43:41.047796 140299127903680 error_handling.py:101] prediction_loop marked as finished
+INFO:tensorflow:Writing predictions to: gs://arabert-mobilebert/squad-ibert/predictions.json
+I1021 16:43:41.047936 140299127903680 run_squad.py:815] Writing predictions to: gs://arabert-mobilebert/squad-ibert/predictions.json
+INFO:tensorflow:Writing nbest to: gs://arabert-mobilebert/squad-ibert/nbest_predictions.json
+I1021 16:43:41.048058 140299127903680 run_squad.py:816] Writing nbest to: gs://arabert-mobilebert/squad-ibert/nbest_predictions.json

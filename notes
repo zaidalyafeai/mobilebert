@@ -9,4 +9,4 @@ num_distill_steps (disillation before)
 and 80% after 15K and then 90% after 20K. (training from scratch)
 * masked lm accuracy is 94 % after pretraining ibert for 5K then distill 10K on mobilebert
 It takes around 2 hours to run 20K iterations using the 26M mobilebert
-
+* ibert's 1000 steps takes around 10 mins on v3-8 . If my calcs are correct then it should take around 16 hrs to run 100K iterations. (256 batch size).
