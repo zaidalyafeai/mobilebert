@@ -1,15 +1,15 @@
-export OUTPUT_DIR=gs://arabert-mobilebert/ibert-third
-export TPU_NAME=arabert-mobilebertv3
-export DATA=gs://arabert-mobilebert/**/tf_examples.tfrecord*
+export OUTPUT_DIR=gs://arabert-mobilebert/ibert-9
+export TPU_NAME=arabert-mobilebert
+export DATA=gs://arabert-mobilebert/dataset-50K/train*
 python3 run_pretraining.py \
   --first_input_file=${DATA} \
   --input_file=${DATA} \
   --output_dir=${OUTPUT_DIR} \
   --do_train=True \
-  --bert_config_file=config/ibert.json \
+  --bert_config_file=config/ibert-small-50K.json \
   --first_num_train_steps=0 \
   --num_train_steps=2000000 \
-  --first_train_batch_size=512 \
+  --first_train_batch_size=256 \
   --train_batch_size=256 \
   --eval_batch_size=128 \
   --max_seq_length=512 \

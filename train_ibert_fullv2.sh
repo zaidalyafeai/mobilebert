@@ -1,5 +1,5 @@
-export OUTPUT_DIR=gs://arabert-mobilebert/ibert-third
-export TPU_NAME=arabert-mobilebertv3
+export OUTPUT_DIR=gs://arabert-mobilebert/ibert-second
+export TPU_NAME=arabert-mobilebertv2
 export DATA=gs://arabert-mobilebert/**/tf_examples.tfrecord*
 python3 run_pretraining.py \
   --first_input_file=${DATA} \
@@ -10,7 +10,7 @@ python3 run_pretraining.py \
   --first_num_train_steps=0 \
   --num_train_steps=2000000 \
   --first_train_batch_size=512 \
-  --train_batch_size=256 \
+  --train_batch_size=4096 \
   --eval_batch_size=128 \
   --max_seq_length=512 \
   --save_checkpoints_steps=10000 \

@@ -526,8 +526,8 @@ def model_fn_builder(bert_config,
         init_string = ", *INIT_FROM_TEACHER_CKPT*"
       tf.logging.info("  name = %s, shape = %s%s", var.name, var.shape,
                       init_string)
-      if not var.name.startswith("teacher"):
-        total_size += functools.reduce(lambda x, y: x * y,
+      #if not var.name.startswith("teacher"):
+      total_size += functools.reduce(lambda x, y: x * y,
                                        var.get_shape().as_list())
     tf.logging.info("  total variable parameters: %d", total_size)
     output_spec = None

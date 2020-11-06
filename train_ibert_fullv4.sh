@@ -1,4 +1,4 @@
-export OUTPUT_DIR=gs://arabert-mobilebert/ibert-third
+export OUTPUT_DIR=gs://arabert-mobilebert/ibert-forth
 export TPU_NAME=arabert-mobilebertv3
 export DATA=gs://arabert-mobilebert/**/tf_examples.tfrecord*
 python3 run_pretraining.py \
