@@ -106,7 +106,6 @@ def calculate(total_cm, num_class):
     recalls = []
     fs = []
     print('====================================')
-    print(num_class)
     label2id = {'[PAD]': 0, 'B-MISC': 1, 'I-MISC': 2, 'O': 3, 'B-PER': 4, 'I-PER': 5, 'B-ORG': 6, 'I-ORG': 7, 'B-LOC': 8, 'I-LOC': 9, 'X':10, '[CLS]': 11, '[SEP]': 12}
     id2label = {value: key for key, value in label2id.items()}
     per_class = defaultdict()
@@ -121,8 +120,7 @@ def calculate(total_cm, num_class):
         precisions.append(precision)
         recalls.append(recall)
         fs.append(f)
-    print(per_class)
-    print(f'Metric \t Precision \t Recall \t f1 ')
+    print(f'M \t P \t R \t F ')
     for cls in ['MISC', 'PER', 'ORG', 'LOC']:
       num = 0
       den_r = 0 
@@ -136,6 +134,6 @@ def calculate(total_cm, num_class):
       precision = num/ den_p
       recall = num/ den_r
       f1 = 2 * precision * recall / (precision + recall+1e-12)
-      print(f'{cls} \t {P:.3f} \t {R:.3f} \t {F:.3f} ')
+      print(f'{cls} \t {precision:.3f} \t {recall:.3f} \t {f1:.3f} ')
       
     return np.mean(precisions), np.mean(recalls), np.mean(fs)
