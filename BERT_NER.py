@@ -648,17 +648,23 @@ def main(_):
             seq_length=FLAGS.max_seq_length,
             is_training=False,
             drop_remainder=False)
+
+        estimator = tf.contrib.tpu.TPUEstimator(
+                    use_tpu=None,
+                    model_fn=model_fn,
+                    config=run_config,
+                    eval_batch_size=FLAGS.eval_batch_size)
+
         result = estimator.evaluate(input_fn=eval_input_fn)
         output_eval_file = os.path.join(FLAGS.output_dir, "eval_results.txt")
-        with open(output_eval_file,"w") as wf:
-            logging.info("***** Eval results *****")
-            confusion_matrix = result["confusion_matrix"]
-            p,r,f = metrics.calculate(confusion_matrix,len(label_list)-1)
-            logging.info("***********************************************")
-            logging.info("********************P = %s*********************",  str(p))
-            logging.info("********************R = %s*********************",  str(r))
-            logging.info("********************F = %s*********************",  str(f))
-            logging.info("***********************************************")
+        logging.info("***** Eval results *****")
+        confusion_matrix = result["confusion_matrix"]
+        p,r,f = metrics.calculate(confusion_matrix,len(label_list)-1)
+        logging.info("***********************************************")
+        logging.info("********************P = %s*********************",  str(p))
+        logging.info("********************R = %s*********************",  str(r))
+        logging.info("********************F = %s*********************",  str(f))
+        logging.info("***********************************************")
 
 
     if FLAGS.do_predict:
