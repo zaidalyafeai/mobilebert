@@ -120,6 +120,11 @@ def calculate(total_cm, num_class):
         precisions.append(precision)
         recalls.append(recall)
         fs.append(f)
+
+    precisions = []
+    recalls = []
+    fs = []
+    print(per_class)
     print(f'M \t P \t R \t F ')
     for cls in ['MISC', 'PER', 'ORG', 'LOC']:
       num = 0
@@ -134,6 +139,9 @@ def calculate(total_cm, num_class):
       precision = num/ den_p
       recall = num/ den_r
       f1 = 2 * precision * recall / (precision + recall+1e-12)
+      precisions.append(precision)
+      recalls.append(recall)
+      fs.append(f1)
       print(f'{cls} \t {precision:.3f} \t {recall:.3f} \t {f1:.3f} ')
       
     return np.mean(precisions), np.mean(recalls), np.mean(fs)
