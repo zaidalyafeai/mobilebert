@@ -67,6 +67,8 @@ flags.DEFINE_bool("do_train", False, "Whether to run training.")
 
 flags.DEFINE_bool("do_eval", False, "Whether to run eval on the dev set.")
 
+flags.DEFINE_bool("do_test", False, "Whether to run eval on the dev set.")
+
 flags.DEFINE_bool(
     "do_predict", False,
     "Whether to run the model in inference mode on the test set.")
@@ -658,6 +660,38 @@ def main(_):
         result = estimator.evaluate(input_fn=eval_input_fn)
         output_eval_file = os.path.join(FLAGS.output_dir, "eval_results.txt")
         logging.info("***** Eval results *****")
+        confusion_matrix = result["confusion_matrix"]
+        p,r,f = metrics.calculate(confusion_matrix,len(label_list)-1)
+        logging.info("***********************************************")
+        logging.info("********************P = %s*********************",  str(p))
+        logging.info("********************R = %s*********************",  str(r))
+        logging.info("********************F = %s*********************",  str(f))
+        logging.info("***********************************************")
+
+    if FLAGS.do_test:
+        test_examples = processor.get_test_examples(FLAGS.data_dir)
+        test_file = os.path.join(FLAGS.output_dir, "test.tf_record")
+        batch_tokens,batch_labels = filed_based_convert_examples_to_features(
+            test_examples, label_list, FLAGS.max_seq_length, tokenizer, test_file)
+
+        logging.info("***** Running testing *****")
+        logging.info("  Num examples = %d", len(test_examples))
+        logging.info("  Batch size = %d", FLAGS.eval_batch_size)
+
+        eval_input_fn = file_based_input_fn_builder(
+            input_file=test_file,
+            seq_length=FLAGS.max_seq_length,
+            is_training=False,
+            drop_remainder=False)
+
+        estimator = tf.contrib.tpu.TPUEstimator(
+                    use_tpu=None,
+                    model_fn=model_fn,
+                    config=run_config,
+                    eval_batch_size=FLAGS.eval_batch_size)
+
+        result = estimator.evaluate(input_fn=eval_input_fn)
+        logging.info("***** Test results *****")
         confusion_matrix = result["confusion_matrix"]
         p,r,f = metrics.calculate(confusion_matrix,len(label_list)-1)
         logging.info("***********************************************")
