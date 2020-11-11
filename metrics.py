@@ -145,3 +145,25 @@ def calculate(total_cm, num_class):
       print(f'{cls} \t {precision:.3f} \t {recall:.3f} \t {f1:.3f} ')
       
     return np.mean(precisions), np.mean(recalls), np.mean(fs)
+
+def calculate_pos(total_cm, num_class):
+    precisions = []
+    recalls = []
+    fs = []
+    print('====================================')
+    label2id = {'[PAD]': 0, 'ADJ': 1, 'ADP': 2, 'ADV': 3, 'AUX':4, 'CONJ': 5, 'DET': 6, 'INTJ': 7, 'NOUN': 8, 'NUM': 9, 'PART': 10, 'PRON': 11, 'PROPN': 12, 'PUNCT': 13, 'SYM': 14, 'VERB': 15, 'X': 16, '[CLS]': 17, '[SEP]': 18}
+    id2label = {value: key for key, value in label2id.items()}
+    per_class = defaultdict()
+    for i in range(num_class):
+        rowsum, colsum = np.sum(total_cm[i]), np.sum(total_cm[r][i] for r in range(num_class))
+        precision = total_cm[i][i] / float(colsum+1e-12)
+        recall = total_cm[i][i] / float(rowsum+1e-12)        
+        f = 2 * precision * recall / (precision + recall+1e-12)
+        print(id2label[i], precision, precision, f )
+        print()
+        precisions.append(precision)
+        recalls.append(recall)
+        fs.append(f)
+
+      
+    return np.mean(precisions), np.mean(recalls), np.mean(fs)
