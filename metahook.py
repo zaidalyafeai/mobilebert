@@ -32,7 +32,8 @@ class MetadataHook(SessionRunHook):
           requests = {}#{"global_step": self._global_step_tensor}
           opts = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
           self.start_time = time.time()
-          tf.logging.info(f'Before Run: {datetime.datetime.utcfromtimestamp(self.start_time).strftime('%Y-%m-%d %H:%M:%S')}')
+          date_time = datetime.datetime.utcfromtimestamp(self.start_time).strftime('%Y-%m-%d %H:%M:%S')
+          tf.logging.info(f'Before Run: {date_time}')
           return SessionRunArgs(requests, options=opts)
   
       def after_run(self, run_context, run_values):
