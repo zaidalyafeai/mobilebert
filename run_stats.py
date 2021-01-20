@@ -1129,6 +1129,10 @@ def main(_):
     hooks = MetadataHook(save_steps=1, output_dir=FLAGS.output_dir) 
     # hooks = tf.train.ProfilerHook(save_steps=1, output_dir=FLAGS.output_dir)
 
+    tf.logging.info("***** Running prediction*****")
+    tf.logging.info("  Num examples = %d ", len(eval_examples))
+    tf.logging.info("  Batch size = %d", FLAGS.eval_batch_size)
+
     if FLAGS.lite_model_path:
       # Use TF lite model for prediction.
       lite_runner = LiteRunner(FLAGS.lite_model_path)
