@@ -1173,7 +1173,7 @@ def main(_):
         drop_remainder=predict_drop_remainder)
 
     hooks = MetadataHook(save_steps=1, output_dir=FLAGS.output_dir) 
-    result = estimator.predict(input_fn=predict_input_fn, hooks = hooks)
+    result = estimator.predict(input_fn=predict_input_fn, hooks = [hooks])
 
     output_predict_file = os.path.join(FLAGS.output_dir, "test_results.tsv")
     with tf.gfile.GFile(output_predict_file, "w") as writer:
