@@ -780,7 +780,7 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
       total_size += functools.reduce(lambda x, y: x * y,
                                        var.get_shape().as_list())
     tf.logging.info("  total variable parameters: %d", total_size)
-    raise('Exception finished ...')
+    # raise('Exception finished ...')
     output_spec = None
     if mode == tf.estimator.ModeKeys.TRAIN:
 
@@ -946,9 +946,9 @@ class LiteRunner(object):
 
     predictions, labels = [], []
     for feature in generate_features():
-      tf.logging.info("Processing example: #%d" % (len(predictions)))
-      if len(predictions) % 1000 == 0:
-        tf.logging.info("%s" % feature)
+    #   tf.logging.info("Processing example: #%d" % (len(predictions)))
+    #   if len(predictions) % 1000 == 0:
+    #     tf.logging.info("%s" % feature)
       input_ids = feature["input_ids"]
       input_mask = feature["input_mask"]
       segment_ids = feature["segment_ids"]
@@ -969,8 +969,8 @@ def convert_examples_to_features(examples, label_list, max_seq_length,
 
   features = []
   for (ex_index, example) in enumerate(examples):
-    if ex_index % 10000 == 0:
-      tf.logging.info("Writing example %d of %d" % (ex_index, len(examples)))
+    # if ex_index % 10000 == 0:
+    #   tf.logging.info("Writing example %d of %d" % (ex_index, len(examples)))
 
     feature = convert_single_example(ex_index, example, label_list,
                                      max_seq_length, tokenizer)
@@ -1076,10 +1076,10 @@ def main(_):
       file_based_convert_examples_to_features(
           train_examples, label_list, FLAGS.max_seq_length,
           tokenizer, train_file)
-      tf.logging.info("***** Running training *****")
-      tf.logging.info("  Num examples = %d", len(train_examples))
-      tf.logging.info("  Batch size = %d", FLAGS.train_batch_size)
-      tf.logging.info("  Num steps = %d", num_train_steps)
+    #   tf.logging.info("***** Running training *****")
+    #   tf.logging.info("  Num examples = %d", len(train_examples))
+    #   tf.logging.info("  Batch size = %d", FLAGS.train_batch_size)
+    #   tf.logging.info("  Num steps = %d", num_train_steps)
     train_input_fn = file_based_input_fn_builder(
         input_file=train_file,
         seq_length=FLAGS.max_seq_length,
@@ -1105,11 +1105,11 @@ def main(_):
       file_based_convert_examples_to_features(
           eval_examples, label_list, FLAGS.max_seq_length,
           tokenizer, eval_file)
-      tf.logging.info("***** Running evaluation *****")
-      tf.logging.info("  Num examples = %d (%d actual, %d padding)",
-                      len(eval_examples), num_actual_eval_examples,
-                      len(eval_examples) - num_actual_eval_examples)
-      tf.logging.info("  Batch size = %d", FLAGS.eval_batch_size)
+    #   tf.logging.info("***** Running evaluation *****")
+    #   tf.logging.info("  Num examples = %d (%d actual, %d padding)",
+    #                   len(eval_examples), num_actual_eval_examples,
+    #                   len(eval_examples) - num_actual_eval_examples)
+    #   tf.logging.info("  Batch size = %d", FLAGS.eval_batch_size)
 
     # This tells the estimator to run through the entire set.
     eval_steps = None
@@ -1172,7 +1172,8 @@ def main(_):
         is_training=False,
         drop_remainder=predict_drop_remainder)
 
-    result = estimator.predict(input_fn=predict_input_fn)
+    hooks = [tf.train.ProfilerHook(save_steps=1, output_dir=model_dir)]
+    result = estimator.predict(input_fn=predict_input_fn, hooks = hooks)
 
     output_predict_file = os.path.join(FLAGS.output_dir, "test_results.tsv")
     with tf.gfile.GFile(output_predict_file, "w") as writer:
