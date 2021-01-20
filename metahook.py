@@ -6,6 +6,7 @@ from tensorflow.python.training.basic_session_run_hooks import SecondOrStepTimer
 import os 
 from tensorflow.python.client import timeline
 import time 
+import datetime
 class MetadataHook(SessionRunHook):
       def __init__(self, save_steps=None, save_secs=None, output_dir=""):
           self._output_tag = "blah-{}"
@@ -31,7 +32,7 @@ class MetadataHook(SessionRunHook):
           requests = {}#{"global_step": self._global_step_tensor}
           opts = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
           self.start_time = time.time()
-          tf.logging.info(f'Before Run: {time.time()}')
+          tf.logging.info(f'Before Run: {datetime.datetime.utcfromtimestamp(self.start_time).strftime('%Y-%m-%d %H:%M:%S')}')
           return SessionRunArgs(requests, options=opts)
   
       def after_run(self, run_context, run_values):
