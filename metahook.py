@@ -38,8 +38,9 @@ class MetadataHook(SessionRunHook):
               tf.logging.error(f'global step is {global_step}, atomic counter is {self._atomic_counter}')
               fetched_timeline = timeline.Timeline(run_values.run_metadata.step_stats)
               chrome_trace = fetched_timeline.generate_chrome_trace_format()
-              with open(os.path.join(self._output_dir, f'timeline_{global_step}.json'), 'w') as f:
-                  f.write(chrome_trace)
+            #   with open(os.path.join(self._output_dir, f'timeline_{global_step}.json'), 'w') as f:
+              with tf.gfile.GFile(os.path.join(self._output_dir, f'timeline_{global_step}.json'), 'w') as f:
+                f.write(chrome_trace)
   
               self._writer.add_run_metadata(run_values.run_metadata,
                                             self._output_tag.format(global_step))
