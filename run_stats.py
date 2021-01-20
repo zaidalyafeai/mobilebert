@@ -21,7 +21,7 @@ from __future__ import print_function
 import collections
 import csv
 import os
-
+from metahook import MetadataHook
 import numpy as np
 
 import tensorflow.compat.v1 as tf
@@ -1172,7 +1172,7 @@ def main(_):
         is_training=False,
         drop_remainder=predict_drop_remainder)
 
-    hooks = [tf.train.ProfilerHook(save_steps=1, output_dir=FLAGS.output_dir)]
+    hooks = MetadataHook(save_steps=1, output_dir=FLAGS.output_dir) 
     result = estimator.predict(input_fn=predict_input_fn, hooks = hooks)
 
     output_predict_file = os.path.join(FLAGS.output_dir, "test_results.tsv")
