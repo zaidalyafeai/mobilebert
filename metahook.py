@@ -19,7 +19,7 @@ class MetadataHook(SessionRunHook):
           self._global_step_tensor = training_util.get_global_step()
           self._writer = tf.summary.FileWriter(self._output_dir,
                                                tf.get_default_graph())
-          self.start_time = time.time()
+          
           if self._global_step_tensor is None:
               raise RuntimeError(
                   "Global step should be created to use ProfilerHook.")
@@ -30,23 +30,25 @@ class MetadataHook(SessionRunHook):
                                        self._next_step))
           requests = {}#{"global_step": self._global_step_tensor}
           opts = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
+          self.start_time = time.time()
+          tf.logging.info(f'Before Run: {time.time()')
           return SessionRunArgs(requests, options=opts)
   
       def after_run(self, run_context, run_values):
-          tf.logging.error(f'Inference Time: {time.time() - self.start_time}')
+          tf.logging.info(f'Inference Time: {time.time() - self.start_time}')
           global_step = self._atomic_counter + 1
           self._atomic_counter = self._atomic_counter + 1
-          if self._request_summary:
-              tf.logging.error(f'global step is {global_step}, atomic counter is {self._atomic_counter}')
-              fetched_timeline = timeline.Timeline(run_values.run_metadata.step_stats)
-              chrome_trace = fetched_timeline.generate_chrome_trace_format()
-            #   with open(os.path.join(self._output_dir, f'timeline_{global_step}.json'), 'w') as f:
-            #   with tf.gfile.GFile(os.path.join(self._output_dir, f'timeline_{global_step}.json'), 'w') as f:
-            #     f.write(chrome_trace)
+        #   if self._request_summary:
+        #       tf.logging.error(f'global step is {global_step}, atomic counter is {self._atomic_counter}')
+        #     #   fetched_timeline = timeline.Timeline(run_values.run_metadata.step_stats)
+        #     #   chrome_trace = fetched_timeline.generate_chrome_trace_format()
+        #     #   with open(os.path.join(self._output_dir, f'timeline_{global_step}.json'), 'w') as f:
+        #     #   with tf.gfile.GFile(os.path.join(self._output_dir, f'timeline_{global_step}.json'), 'w') as f:
+        #     #     f.write(chrome_trace)
   
-              self._writer.add_run_metadata(run_values.run_metadata,
-                                            self._output_tag.format(global_step))
-              self._writer.flush()
+        #       self._writer.add_run_metadata(run_values.run_metadata,
+        #                                     self._output_tag.format(global_step))
+        #       self._writer.flush()
           self._next_step = global_step + 1
   
       def end(self, session):
