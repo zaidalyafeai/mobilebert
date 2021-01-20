@@ -1126,8 +1126,9 @@ def main(_):
         is_training=False,
         drop_remainder=eval_drop_remainder)
 
-    hooks = MetadataHook(save_steps=1, output_dir=FLAGS.output_dir) 
-    
+    # hooks = MetadataHook(save_steps=1, output_dir=FLAGS.output_dir) 
+    hooks = tf.train.ProfilerHook(save_steps=1, output_dir=FLAGS.output_dir)
+
     if FLAGS.lite_model_path:
       # Use TF lite model for prediction.
       lite_runner = LiteRunner(FLAGS.lite_model_path)
