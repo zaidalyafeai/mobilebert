@@ -1132,9 +1132,9 @@ def main(_):
       # Use TF lite model for prediction.
       lite_runner = LiteRunner(FLAGS.lite_model_path)
       params = {"batch_size": 1}
-      result = lite_runner.evaluate(eval_input_fn, params)
+      result = lite_runner.evaluate(eval_input_fn, params, hooks = [hooks])
     else:
-      result = estimator.evaluate(input_fn=eval_input_fn, steps=eval_steps)
+      result = estimator.evaluate(input_fn=eval_input_fn, steps=eval_steps, hooks = [hooks])
 
     output_eval_file = os.path.join(FLAGS.output_dir, "eval_results.txt")
     with tf.gfile.GFile(output_eval_file, "w") as writer:
